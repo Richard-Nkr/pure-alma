@@ -34,7 +34,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-contain"
+          className="object-cover"
         />
 
         {/* dégradé subtil pour la lisibilité de la nav */}
