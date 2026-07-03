@@ -11,10 +11,12 @@
 @theme {
   --color-amla-blue: #133056;
   --color-amla-blue-deep: #0e243f;
+  --color-amla-blue-light: #1d4270;
   --color-amla-yellow: #f2b705;
   --color-amla-yellow-deep: #d9a404;
   --color-amla-bg: #fdfbf7;
   --color-amla-surface: #ffffff;
+  --color-amla-cream: #f7ecc7;
   --color-amla-text: #1a202c;
   --color-amla-muted: #4a5568;
 

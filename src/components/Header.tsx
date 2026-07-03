@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import CtaButton from "./CtaButton";
 
 const links = [
@@ -15,13 +16,18 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-amla-blue/10 bg-amla-bg/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-transparent">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-amla-blue font-display text-lg text-amla-yellow">
-            A
-          </span>
-          <span className="font-display text-2xl text-amla-blue">Pure Alma</span>
+          <Image
+            src="/logo.png"
+            alt="Pure Alma"
+            width={44}
+            height={44}
+            className="h-11 w-11 object-contain"
+            priority
+          />
+          <span className="font-display text-2xl text-amla-yellow">Pure Alma</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -29,7 +35,7 @@ export default function Header() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-condensed text-sm font-medium uppercase tracking-wide text-amla-blue/80 transition-colors hover:text-amla-blue"
+                className="font-condensed text-sm font-medium uppercase tracking-wide text-amla-yellow/85 transition-colors hover:text-amla-yellow"
               >
                 {l.label}
               </a>
@@ -46,7 +52,7 @@ export default function Header() {
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-amla-blue md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-amla-yellow md:hidden"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -59,14 +65,14 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="border-t border-amla-blue/10 bg-amla-bg md:hidden">
+        <div className="border-t border-amla-yellow/15 bg-amla-blue-deep md:hidden">
           <ul className="flex flex-col px-5 py-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 font-condensed text-sm font-medium uppercase tracking-wide text-amla-blue/80"
+                  className="block py-2 font-condensed text-sm font-medium uppercase tracking-wide text-amla-yellow/85"
                 >
                   {l.label}
                 </a>

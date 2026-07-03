@@ -39,7 +39,7 @@ export default function Testimonials() {
           <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
             Ils en raffolent
           </p>
-          <h2 className="mt-4 font-display text-5xl text-white md:text-6xl">
+          <h2 className="mt-4 font-display text-5xl text-amla-yellow md:text-6xl">
             Noté 4,9/5 par nos gourmands.
           </h2>
         </div>
@@ -48,17 +48,17 @@ export default function Testimonials() {
           {reviews.map((r) => (
             <figure
               key={r.name}
-              className="flex flex-col rounded-md border border-white/10 bg-white/5 p-7"
+              className="flex flex-col rounded-md border border-amla-yellow/15 bg-amla-blue-light p-7"
             >
               <Stars />
-              <blockquote className="mt-4 flex-1 leading-relaxed text-white/90">
+              <blockquote className="mt-4 flex-1 leading-relaxed text-amla-cream/90">
                 “{r.quote}”
               </blockquote>
               <figcaption className="mt-6">
-                <p className="font-condensed font-semibold uppercase tracking-wide text-white">
+                <p className="font-condensed font-semibold uppercase tracking-wide text-amla-yellow">
                   {r.name}
                 </p>
-                <p className="text-sm text-white/50">{r.role}</p>
+                <p className="text-sm text-amla-cream/50">{r.role}</p>
               </figcaption>
             </figure>
           ))}

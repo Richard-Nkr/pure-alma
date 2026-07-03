@@ -33,7 +33,7 @@ export default function Benefits() {
           <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
             Bienfaits
           </p>
-          <h2 className="mt-4 font-display text-5xl text-white md:text-6xl">
+          <h2 className="mt-4 font-display text-5xl text-amla-yellow md:text-6xl">
             Gourmand. Et bon pour toi.
           </h2>
         </div>
@@ -49,10 +49,10 @@ export default function Benefits() {
                 />
                 <b.Icon size={28} strokeWidth={2.25} className="relative text-amla-blue" />
               </div>
-              <h3 className="mt-5 font-condensed text-xl font-semibold uppercase tracking-wide text-white">
+              <h3 className="mt-5 font-condensed text-xl font-semibold uppercase tracking-wide text-amla-yellow">
                 {b.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">
+              <p className="mt-2 text-sm leading-relaxed text-amla-cream/75">
                 {b.desc}
               </p>
             </div>

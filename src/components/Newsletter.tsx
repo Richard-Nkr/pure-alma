@@ -9,15 +9,15 @@ export default function Newsletter() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="commander" className="bg-amla-bg">
+    <section id="commander" className="bg-amla-blue">
       <div className="mx-auto max-w-5xl px-5 py-24">
-        <div className="relative overflow-hidden rounded-md bg-amla-blue px-6 py-16 text-center sm:px-16">
+        <div className="relative overflow-hidden rounded-md bg-amla-blue-light px-6 py-16 text-center ring-1 ring-amla-yellow/20 sm:px-16">
           <Blob className="-right-16 -top-16 h-64 w-64 opacity-25" />
           <div className="relative mx-auto max-w-xl">
-            <h2 className="font-display text-5xl leading-tight text-white md:text-6xl">
+            <h2 className="font-display text-5xl leading-tight text-amla-yellow md:text-6xl">
               Reçois ton premier pot.
             </h2>
-            <p className="mt-4 text-lg text-white/85">
+            <p className="mt-4 text-lg text-amla-cream/85">
               Inscris-toi et profite de <strong className="text-amla-yellow">-10%</strong>{" "}
               sur ta première commande, plus nos recettes et routines à
               l&apos;amlou.
@@ -47,7 +47,7 @@ export default function Newsletter() {
               </form>
             )}
 
-            <p className="mt-4 font-condensed text-xs uppercase tracking-wide text-white/60">
+            <p className="mt-4 font-condensed text-xs uppercase tracking-wide text-amla-cream/60">
               Livraison offerte dès 3 pots · Paiement sécurisé · Satisfait ou remboursé
             </p>
           </div>

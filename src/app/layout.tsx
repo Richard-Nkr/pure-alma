@@ -53,7 +53,7 @@ export default function RootLayout({
       data-astryx-theme="butter"
       className={`${inter.variable} ${oswald.variable} ${shroomsGarden.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-amla-bg font-sans text-amla-text">
+      <body className="min-h-full flex flex-col bg-amla-blue font-sans text-amla-cream">
         <Providers>{children}</Providers>
       </body>
     </html>

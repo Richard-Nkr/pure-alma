@@ -14,7 +14,7 @@ export default function TrustBar() {
             <p className="font-condensed text-xl font-semibold uppercase tracking-wide text-amla-yellow">
               {it.title}
             </p>
-            <p className="mt-1 text-sm text-white/70">{it.desc}</p>
+            <p className="mt-1 text-sm text-amla-cream/70">{it.desc}</p>
           </div>
         ))}
       </div>
