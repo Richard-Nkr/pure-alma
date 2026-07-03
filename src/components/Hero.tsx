@@ -1,27 +1,10 @@
 import Image from "next/image";
 
-const leftLinks = [
+const links = [
   { href: "#", label: "À propos" },
   { href: "#", label: "La recette" },
-  { href: "#", label: "Le journal" },
-];
-
-const rightLinks = [
-  { href: "#", label: "Nos pots" },
-  { href: "#", label: "Points de vente" },
   { href: "#", label: "Contact" },
 ];
-
-function NavLink({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={href}
-      className="font-sans text-lg font-bold uppercase leading-none tracking-tight text-amla-yellow transition-opacity hover:opacity-70 lg:text-2xl"
-    >
-      {label}
-    </a>
-  );
-}
 
 export default function Hero() {
   return (
@@ -40,46 +23,29 @@ export default function Hero() {
         />
 
         {/* dégradé subtil pour la lisibilité de la nav */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-amla-blue/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
 
-        <header className="absolute inset-x-0 top-0 z-10 px-6 py-7 sm:px-10">
-          {/* Desktop : grands titres de part et d'autre du logo centré */}
-          <nav className="hidden grid-cols-[1fr_auto_1fr] items-center gap-8 md:grid">
-            <div className="flex flex-col gap-2">
-              {leftLinks.map((l) => (
-                <NavLink key={l.label} {...l} />
-              ))}
-            </div>
-
+        <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
+          <div className="flex items-center justify-between gap-4">
             <a
               href="#top"
-              className="text-center font-display text-6xl leading-none text-amla-yellow lg:text-7xl"
+              className="font-display text-4xl leading-none text-amla-yellow sm:text-5xl"
               aria-label="AMLA"
             >
               AMLA
             </a>
 
-            <div className="flex flex-col items-end gap-2 text-right">
-              {rightLinks.map((l) => (
-                <NavLink key={l.label} {...l} />
+            <nav className="flex items-center gap-4 sm:gap-8">
+              {links.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
+                >
+                  {l.label}
+                </a>
               ))}
-            </div>
-          </nav>
-
-          {/* Mobile : logo centré + liens en dessous */}
-          <div className="flex flex-col items-center gap-5 md:hidden">
-            <a
-              href="#top"
-              className="font-display text-6xl leading-none text-amla-yellow"
-              aria-label="AMLA"
-            >
-              AMLA
-            </a>
-            <div className="flex flex-col items-center gap-2">
-              {[...leftLinks, ...rightLinks].map((l) => (
-                <NavLink key={l.label} {...l} />
-              ))}
-            </div>
+            </nav>
           </div>
         </header>
       </div>
