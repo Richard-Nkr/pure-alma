@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { DM_Sans, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -51,7 +51,7 @@ export default function RootLayout({
       lang="fr"
       data-theme="light"
       data-astryx-theme="butter"
-      className={`${inter.variable} ${oswald.variable} ${shroomsGarden.variable} h-full antialiased`}
+      className={`${dmSans.variable} ${oswald.variable} ${shroomsGarden.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-amla-blue font-sans text-amla-cream">
         <Providers>{children}</Providers>

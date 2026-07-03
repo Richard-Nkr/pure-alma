@@ -22,7 +22,7 @@
 
   --font-display: var(--font-shrooms);
   --font-condensed: var(--font-oswald);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-body);
 }
 
 /* Charte graphique ALMA : surcharge des tokens Astryx (thème butter) */
@@ -41,7 +41,7 @@ html[data-astryx-theme="butter"] {
   --color-icon-primary: #133056;
   --color-border: #13305619;
   --color-border-emphasized: #13305633;
-  --font-family-body: var(--font-inter), system-ui, sans-serif;
+  --font-family-body: var(--font-body), system-ui, sans-serif;
   --font-family-heading: var(--font-oswald), system-ui, sans-serif;
 }
 

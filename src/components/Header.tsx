@@ -36,7 +36,7 @@ export default function Header() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-condensed text-sm font-medium uppercase tracking-wide text-amla-yellow/85 transition-colors hover:text-amla-yellow"
+                className="font-condensed text-sm font-medium uppercase tracking-wide text-zinc-300 transition-colors hover:text-amla-yellow"
               >
                 {l.label}
               </a>
@@ -73,7 +73,7 @@ export default function Header() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 font-condensed text-sm font-medium uppercase tracking-wide text-amla-yellow/85"
+                  className="block py-2 font-condensed text-sm font-medium uppercase tracking-wide text-zinc-300 transition-colors hover:text-amla-yellow"
                 >
                   {l.label}
                 </a>
