@@ -1,65 +1,60 @@
+"use client";
+
+import { Leaf, Zap, ShieldCheck, Sparkles } from "lucide-react";
+import { Heading } from "@astryxdesign/core/Heading";
+import { Text } from "@astryxdesign/core/Text";
+
 const benefits = [
   {
     title: "Riche en bonnes graisses",
     desc: "L'huile d'argan et les amandes apportent des acides gras insaturés et de la vitamine E.",
-    icon: "M12 3v18M5 8l7-5 7 5",
+    Icon: Leaf,
   },
   {
     title: "Source d'énergie",
     desc: "Un carburant naturel idéal au petit-déjeuner ou avant l'effort, sans coup de barre.",
-    icon: "M13 2L3 14h7l-1 8 11-13h-7z",
+    Icon: Zap,
   },
   {
     title: "Antioxydants naturels",
     desc: "La vitamine E de l'argan aide à protéger les cellules du stress oxydatif.",
-    icon: "M12 21c-4-2-7-5-7-10a7 7 0 0114 0c0 5-3 8-7 10z",
+    Icon: ShieldCheck,
   },
   {
     title: "Sans sucre raffiné",
     desc: "Seul le miel apporte une douceur naturelle. Aucun sucre blanc ajouté.",
-    icon: "M20 12a8 8 0 11-16 0 8 8 0 0116 0zM9 12h6",
+    Icon: Sparkles,
   },
 ];
 
 export default function Benefits() {
   return (
-    <section id="bienfaits" className="bg-sand/50">
+    <section id="bienfaits" className="bg-body">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gold-deep">
-            Bienfaits
-          </span>
-          <h2 className="mt-4 font-display text-4xl font-bold text-ink md:text-5xl">
+          <Text as="p" type="label" color="accent">
+            BIENFAITS
+          </Text>
+          <Heading level={2} type="display-2" className="mt-4">
             Gourmand et bon pour vous.
-          </h2>
+          </Heading>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b) => (
             <div
               key={b.title}
-              className="rounded-2xl border border-almond bg-cream p-6"
+              className="rounded-lg border border-border bg-surface p-6"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-azure/15 text-navy">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d={b.icon} />
-                </svg>
+              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[var(--color-accent-muted)] text-[var(--color-accent)]">
+                <b.Icon size={24} strokeWidth={2} />
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-ink">
+              <Heading level={3} className="mt-5 text-lg">
                 {b.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              </Heading>
+              <Text color="secondary" className="mt-2 block">
                 {b.desc}
-              </p>
+              </Text>
             </div>
           ))}
         </div>

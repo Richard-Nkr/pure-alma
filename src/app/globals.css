@@ -1,31 +1,17 @@
-@import "tailwindcss";
+@layer reset, theme, base, astryx-base, astryx-theme, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import '@astryxdesign/core/reset.css';
+@import '@astryxdesign/core/astryx.css';
+@import '@astryxdesign/theme-butter/theme.css';
+@import '@astryxdesign/core/tailwind-theme.css';
+@import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-  --color-cream: #f4f1ea;
-  --color-sand: #e9e2d3;
-  --color-almond: #d8cfbc;
-  --color-gold: #c9a227;
-  --color-gold-deep: #9c7c17;
-  --color-navy: #123a7e;
-  --color-navy-deep: #0a1f47;
-  --color-azure: #2f6fbf;
-  --color-ink: #0c1c3d;
-  --color-ink-soft: #47536e;
-
+  --font-title: var(--font-shrooms);
   --font-display: var(--font-playfair);
   --font-sans: var(--font-geist-sans);
-  --font-title: var(--font-shrooms);
-}
-
-:root {
-  --background: #f4f1ea;
-  --foreground: #0c1c3d;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
 html {

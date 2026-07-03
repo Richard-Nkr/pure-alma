@@ -5,9 +5,18 @@ Landing page pour **Pure Alma**, un amlou marocain artisanal (amandes torréfié
 ## Stack
 
 - [Next.js 16](https://nextjs.org) (App Router)
-- [Tailwind CSS v4](https://tailwindcss.com)
+- [Astryx](https://github.com/facebook/astryx) — design system (thème `butter`)
+- [Tailwind CSS v4](https://tailwindcss.com) (pont de tokens Astryx)
+- Police locale `Shrooms Garden` via `next/font/local`
 - TypeScript
 - Déployé sur [Vercel](https://vercel.com)
+
+### Astryx CLI
+
+```bash
+npm run astryx -- component --list   # lister les composants
+npm run astryx -- docs tokens        # référence des tokens
+```
 
 ## Développement
 

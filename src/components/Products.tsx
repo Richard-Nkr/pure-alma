@@ -1,4 +1,9 @@
 import Image from "next/image";
+import { Heading } from "@astryxdesign/core/Heading";
+import { Text } from "@astryxdesign/core/Text";
+import { Card } from "@astryxdesign/core/Card";
+import { Badge } from "@astryxdesign/core/Badge";
+import { Button } from "@astryxdesign/core/Button";
 
 const products = [
   {
@@ -29,67 +34,62 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="saveurs" className="mx-auto max-w-6xl px-5 py-24">
-      <div className="mx-auto max-w-2xl text-center">
-        <span className="text-xs font-semibold uppercase tracking-widest text-gold-deep">
-          Nos saveurs
-        </span>
-        <h2 className="mt-4 font-display text-4xl font-bold text-ink md:text-5xl">
-          Trois pots, une même exigence.
-        </h2>
-        <p className="mt-4 text-ink-soft">
-          Chaque variété est préparée en petits lots pour préserver les arômes.
-        </p>
-      </div>
+    <section id="saveurs" className="bg-surface">
+      <div className="mx-auto max-w-6xl px-5 py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <Text as="p" type="label" color="accent">
+            NOS SAVEURS
+          </Text>
+          <Heading level={2} type="display-2" className="mt-4">
+            Trois pots, une même exigence.
+          </Heading>
+          <Text as="p" type="large" color="secondary" className="mt-4 block">
+            Chaque variété est préparée en petits lots pour préserver les arômes.
+          </Text>
+        </div>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-3">
-        {products.map((p) => (
-          <div
-            key={p.name}
-            className={`relative flex flex-col overflow-hidden rounded-3xl border transition-all hover:-translate-y-2 ${
-              p.featured
-                ? "border-navy bg-white shadow-xl shadow-navy/10"
-                : "border-almond bg-white/60"
-            }`}
-          >
-            {p.featured && (
-              <span className="absolute left-1/2 top-4 z-10 -translate-x-1/2 rounded-full bg-navy px-4 py-1 text-xs font-semibold text-cream">
-                Le plus aimé
-              </span>
-            )}
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand">
-              <Image
-                src={p.img}
-                alt={`Pot ${p.name} — Pure Alma`}
-                fill
-                sizes="(max-width: 768px) 90vw, 360px"
-                className="object-cover"
-              />
-            </div>
-            <div className="flex flex-1 flex-col p-7 text-center">
-              <h3 className="font-display text-2xl font-bold text-ink">
-                {p.name}
-              </h3>
-              <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-gold-deep">
-                {p.tagline}
-              </p>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                {p.desc}
-              </p>
-              <div className="mt-6 flex w-full items-center justify-between">
-                <span className="font-display text-2xl font-bold text-ink">
-                  {p.price}
-                </span>
-                <a
-                  href="#commander"
-                  className="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-navy-deep"
-                >
-                  Ajouter
-                </a>
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {products.map((p) => (
+            <Card
+              key={p.name}
+              padding={0}
+              variant={p.featured ? "blue" : "default"}
+              className="flex flex-col overflow-hidden transition-transform hover:-translate-y-2"
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-body">
+                <Image
+                  src={p.img}
+                  alt={`Pot ${p.name} — Pure Alma`}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 360px"
+                  className="object-cover"
+                />
+                {p.featured && (
+                  <div className="absolute left-4 top-4">
+                    <Badge variant="info" label="Le plus aimé" />
+                  </div>
+                )}
               </div>
-            </div>
-          </div>
-        ))}
+              <div className="flex flex-1 flex-col gap-2 p-6 text-center">
+                <Heading level={3} className="text-xl">
+                  {p.name}
+                </Heading>
+                <Text type="label" color="accent">
+                  {p.tagline}
+                </Text>
+                <Text color="secondary" className="mt-2 block flex-1">
+                  {p.desc}
+                </Text>
+                <div className="mt-4 flex items-center justify-between">
+                  <Text type="large" weight="bold">
+                    {p.price}
+                  </Text>
+                  <Button label="Ajouter" href="#commander" variant="primary" />
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

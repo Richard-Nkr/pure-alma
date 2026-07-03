@@ -1,3 +1,7 @@
+import { Heading } from "@astryxdesign/core/Heading";
+import { Text } from "@astryxdesign/core/Text";
+import { Card } from "@astryxdesign/core/Card";
+
 const reviews = [
   {
     quote:
@@ -21,7 +25,7 @@ const reviews = [
 
 function Stars() {
   return (
-    <div className="flex gap-0.5 text-gold">
+    <div className="flex gap-0.5 text-[var(--color-warning)]">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z" />
@@ -33,32 +37,33 @@ function Stars() {
 
 export default function Testimonials() {
   return (
-    <section id="avis" className="bg-navy-deep text-cream">
+    <section id="avis" className="bg-body">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gold">
-            Ils en raffolent
-          </span>
-          <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">
+          <Text as="p" type="label" color="accent">
+            ILS EN RAFFOLENT
+          </Text>
+          <Heading level={2} type="display-2" className="mt-4">
             Noté 4,9/5 par nos gourmands.
-          </h2>
+          </Heading>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
           {reviews.map((r) => (
-            <figure
-              key={r.name}
-              className="flex flex-col rounded-2xl border border-cream/10 bg-cream/5 p-7"
-            >
+            <Card key={r.name} padding={6} className="flex flex-col">
               <Stars />
-              <blockquote className="mt-4 flex-1 text-cream/85 leading-relaxed">
+              <Text as="p" type="large" className="mt-4 block flex-1">
                 “{r.quote}”
-              </blockquote>
-              <figcaption className="mt-6">
-                <p className="font-semibold text-cream">{r.name}</p>
-                <p className="text-sm text-cream/50">{r.role}</p>
-              </figcaption>
-            </figure>
+              </Text>
+              <div className="mt-6">
+                <Text as="p" weight="semibold">
+                  {r.name}
+                </Text>
+                <Text as="p" type="supporting" color="secondary">
+                  {r.role}
+                </Text>
+              </div>
+            </Card>
           ))}
         </div>
       </div>
