@@ -1,20 +1,22 @@
 import Image from "next/image";
 
 const leftLinks = [
-  { href: "#produit", label: "À propos" },
-  { href: "#degustation", label: "La recette" },
+  { href: "#", label: "À propos" },
+  { href: "#", label: "La recette" },
+  { href: "#", label: "Le journal" },
 ];
 
 const rightLinks = [
-  { href: "#saveurs", label: "Points de vente" },
-  { href: "#commander", label: "Contact" },
+  { href: "#", label: "Nos pots" },
+  { href: "#", label: "Points de vente" },
+  { href: "#", label: "Contact" },
 ];
 
 function NavLink({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
-      className="font-sans text-sm font-medium uppercase tracking-[0.15em] text-amla-yellow transition-opacity hover:opacity-70"
+      className="font-sans text-lg font-bold uppercase leading-none tracking-tight text-amla-yellow transition-opacity hover:opacity-70 lg:text-2xl"
     >
       {label}
     </a>
@@ -38,44 +40,44 @@ export default function Hero() {
         />
 
         {/* dégradé subtil pour la lisibilité de la nav */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/60 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-amla-blue/70 to-transparent" />
 
-        <header className="absolute inset-x-0 top-0 z-10 px-6 py-6 sm:px-10">
-          {/* Desktop : liens de part et d'autre du logo centré */}
-          <nav className="hidden grid-cols-3 items-center md:grid">
-            <div className="flex items-center gap-8">
+        <header className="absolute inset-x-0 top-0 z-10 px-6 py-7 sm:px-10">
+          {/* Desktop : grands titres de part et d'autre du logo centré */}
+          <nav className="hidden grid-cols-[1fr_auto_1fr] items-center gap-8 md:grid">
+            <div className="flex flex-col gap-2">
               {leftLinks.map((l) => (
-                <NavLink key={l.href} {...l} />
+                <NavLink key={l.label} {...l} />
               ))}
             </div>
 
             <a
               href="#top"
-              className="text-center font-display text-5xl leading-none text-amla-yellow lg:text-6xl"
+              className="text-center font-display text-6xl leading-none text-amla-yellow lg:text-7xl"
               aria-label="AMLA"
             >
               AMLA
             </a>
 
-            <div className="flex items-center justify-end gap-8">
+            <div className="flex flex-col items-end gap-2 text-right">
               {rightLinks.map((l) => (
-                <NavLink key={l.href} {...l} />
+                <NavLink key={l.label} {...l} />
               ))}
             </div>
           </nav>
 
           {/* Mobile : logo centré + liens en dessous */}
-          <div className="flex flex-col items-center gap-4 md:hidden">
+          <div className="flex flex-col items-center gap-5 md:hidden">
             <a
               href="#top"
-              className="font-display text-5xl leading-none text-amla-yellow"
+              className="font-display text-6xl leading-none text-amla-yellow"
               aria-label="AMLA"
             >
               AMLA
             </a>
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            <div className="flex flex-col items-center gap-2">
               {[...leftLinks, ...rightLinks].map((l) => (
-                <NavLink key={l.href} {...l} />
+                <NavLink key={l.label} {...l} />
               ))}
             </div>
           </div>
