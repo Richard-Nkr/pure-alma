@@ -33,7 +33,7 @@ export default function Hero() {
                 <a
                   key={l.label}
                   href={l.href}
-                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
+                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-xl"
                 >
                   {l.label}
                 </a>
@@ -53,7 +53,7 @@ export default function Hero() {
                 <a
                   key={l.label}
                   href={l.href}
-                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
+                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-xl"
                 >
                   {l.label}
                 </a>
