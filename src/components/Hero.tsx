@@ -29,7 +29,7 @@ export default function Hero() {
     >
       <div className="relative h-[calc(100svh-32px)] w-full overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
         <Image
-          src="/images/img7.png"
+          src="/images/img8.png"
           alt="Une cuillère en bois dégoulinante d'amlou ALMA au-dessus du pot"
           fill
           priority
