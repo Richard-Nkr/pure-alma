@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import Story from "@/components/Story";
 import Products from "@/components/Products";
@@ -14,7 +13,6 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-1">
-        <Hero />
         <TrustBar />
         <Story />
         <Products />
