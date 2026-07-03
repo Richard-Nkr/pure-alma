@@ -1,10 +1,11 @@
 import Image from "next/image";
 
-const links = [
+const leftLinks = [
   { href: "#", label: "À propos" },
   { href: "#", label: "La recette" },
-  { href: "#", label: "Contact" },
 ];
+
+const rightLinks = [{ href: "#", label: "Contact" }];
 
 export default function Hero() {
   return (
@@ -26,27 +27,39 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
 
         <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
-          <div className="flex items-center justify-between gap-4">
+          <nav className="grid grid-cols-3 items-center gap-2">
+            <div className="flex items-center gap-3 sm:gap-8">
+              {leftLinks.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+
             <a
               href="#top"
-              className="font-display text-4xl leading-none text-amla-yellow sm:text-5xl"
+              className="text-center font-display text-5xl leading-none text-amla-yellow sm:text-6xl lg:text-7xl"
               aria-label="AMLA"
             >
               AMLA
             </a>
 
-            <nav className="flex items-center gap-4 sm:gap-8">
-              {links.map((l) => (
+            <div className="flex items-center justify-end gap-3 sm:gap-8">
+              {rightLinks.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
-                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
+                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-tight text-amla-yellow transition-opacity hover:opacity-70 sm:text-lg"
                 >
                   {l.label}
                 </a>
               ))}
-            </nav>
-          </div>
+            </div>
+          </nav>
         </header>
       </div>
     </section>
