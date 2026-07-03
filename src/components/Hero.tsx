@@ -13,17 +13,18 @@ export default function Hero() {
       className="border-[16px] border-amla-yellow bg-amla-blue sm:border-[22px]"
     >
       <div className="relative h-[calc(100svh-32px)] w-full overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
-        <Image
-          src="/images/img8.png"
-          alt="Une cuillère en bois dégoulinante d'amlou ALMA au-dessus du pot"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-
-        {/* dégradé subtil pour la lisibilité de la nav */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
+        {/* image centrée */}
+        <div className="absolute inset-0 flex items-center justify-center px-6 pb-10 pt-28 sm:pt-32">
+          <Image
+            src="/images/img9.png"
+            alt="Amlou artisanal ALMA"
+            width={2752}
+            height={1536}
+            priority
+            sizes="100vw"
+            className="h-auto max-h-full w-full max-w-5xl object-contain"
+          />
+        </div>
 
         <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
           <div className="flex items-center justify-between gap-4">
