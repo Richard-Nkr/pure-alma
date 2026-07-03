@@ -11,10 +11,10 @@ export default function TrustBar() {
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-5 py-8 md:grid-cols-4">
         {items.map((it) => (
           <div key={it.title} className="text-center md:text-left">
-            <p className="font-display text-lg font-bold text-terracotta">
+            <p className="font-display text-lg font-bold text-navy">
               {it.title}
             </p>
-            <p className="mt-1 text-sm text-cacao-soft">{it.desc}</p>
+            <p className="mt-1 text-sm text-ink-soft">{it.desc}</p>
           </div>
         ))}
       </div>

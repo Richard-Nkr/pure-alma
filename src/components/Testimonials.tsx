@@ -21,7 +21,7 @@ const reviews = [
 
 function Stars() {
   return (
-    <div className="flex gap-0.5 text-honey">
+    <div className="flex gap-0.5 text-gold">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z" />
@@ -33,10 +33,10 @@ function Stars() {
 
 export default function Testimonials() {
   return (
-    <section id="avis" className="bg-cacao text-cream">
+    <section id="avis" className="bg-navy-deep text-cream">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-honey">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gold">
             Ils en raffolent
           </span>
           <h2 className="mt-4 font-display text-4xl font-bold md:text-5xl">

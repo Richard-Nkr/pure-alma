@@ -1,4 +1,4 @@
-import AmlouJar from "./AmlouJar";
+import Image from "next/image";
 
 const products = [
   {
@@ -6,7 +6,7 @@ const products = [
     tagline: "L'original doré",
     desc: "Amandes torréfiées, huile d'argan et miel. La recette ancestrale, équilibrée et onctueuse.",
     price: "12€",
-    lid: "#3a2a1e",
+    img: "/images/img4.png",
     featured: false,
   },
   {
@@ -14,7 +14,7 @@ const products = [
     tagline: "Plus de cacao",
     desc: "Notre traditionnel relevé d'une pointe de cacao cru pour une gourmandise profonde.",
     price: "14€",
-    lid: "#5b4636",
+    img: "/images/img6.png",
     featured: true,
   },
   {
@@ -22,7 +22,7 @@ const products = [
     tagline: "Sans miel",
     desc: "Uniquement amandes et huile d'argan. Idéal pour les recettes salées et le sport.",
     price: "13€",
-    lid: "#7c7a3f",
+    img: "/images/img1.png",
     featured: false,
   },
 ];
@@ -31,13 +31,13 @@ export default function Products() {
   return (
     <section id="saveurs" className="mx-auto max-w-6xl px-5 py-24">
       <div className="mx-auto max-w-2xl text-center">
-        <span className="text-xs font-semibold uppercase tracking-widest text-amber-deep">
+        <span className="text-xs font-semibold uppercase tracking-widest text-gold-deep">
           Nos saveurs
         </span>
-        <h2 className="mt-4 font-display text-4xl font-bold text-cacao md:text-5xl">
+        <h2 className="mt-4 font-display text-4xl font-bold text-ink md:text-5xl">
           Trois pots, une même exigence.
         </h2>
-        <p className="mt-4 text-cacao-soft">
+        <p className="mt-4 text-ink-soft">
           Chaque variété est préparée en petits lots pour préserver les arômes.
         </p>
       </div>
@@ -46,41 +46,47 @@ export default function Products() {
         {products.map((p) => (
           <div
             key={p.name}
-            className={`relative flex flex-col items-center rounded-3xl border p-8 text-center transition-all hover:-translate-y-2 ${
+            className={`relative flex flex-col overflow-hidden rounded-3xl border transition-all hover:-translate-y-2 ${
               p.featured
-                ? "border-terracotta bg-sand shadow-xl shadow-terracotta/10"
+                ? "border-navy bg-white shadow-xl shadow-navy/10"
                 : "border-almond bg-white/60"
             }`}
           >
             {p.featured && (
-              <span className="absolute -top-3 rounded-full bg-terracotta px-4 py-1 text-xs font-semibold text-cream">
+              <span className="absolute left-1/2 top-4 z-10 -translate-x-1/2 rounded-full bg-navy px-4 py-1 text-xs font-semibold text-cream">
                 Le plus aimé
               </span>
             )}
-            <AmlouJar className="h-44 w-auto" lidColor={p.lid} />
-            <h3 className="mt-6 font-display text-2xl font-bold text-cacao">
-              {p.name}
-            </h3>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-amber-deep">
-              {p.tagline}
-            </p>
-            <p className="mt-4 flex-1 text-sm leading-relaxed text-cacao-soft">
-              {p.desc}
-            </p>
-            <div className="mt-6 flex w-full items-center justify-between">
-              <span className="font-display text-2xl font-bold text-cacao">
-                {p.price}
-              </span>
-              <a
-                href="#commander"
-                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-colors ${
-                  p.featured
-                    ? "bg-terracotta text-cream hover:bg-amber-deep"
-                    : "bg-cacao text-cream hover:bg-cacao-soft"
-                }`}
-              >
-                Ajouter
-              </a>
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand">
+              <Image
+                src={p.img}
+                alt={`Pot ${p.name} — Pure Alma`}
+                fill
+                sizes="(max-width: 768px) 90vw, 360px"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-1 flex-col p-7 text-center">
+              <h3 className="font-display text-2xl font-bold text-ink">
+                {p.name}
+              </h3>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-gold-deep">
+                {p.tagline}
+              </p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
+                {p.desc}
+              </p>
+              <div className="mt-6 flex w-full items-center justify-between">
+                <span className="font-display text-2xl font-bold text-ink">
+                  {p.price}
+                </span>
+                <a
+                  href="#commander"
+                  className="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-navy-deep"
+                >
+                  Ajouter
+                </a>
+              </div>
             </div>
           </div>
         ))}

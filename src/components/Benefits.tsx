@@ -26,10 +26,10 @@ export default function Benefits() {
     <section id="bienfaits" className="bg-sand/50">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-amber-deep">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gold-deep">
             Bienfaits
           </span>
-          <h2 className="mt-4 font-display text-4xl font-bold text-cacao md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl font-bold text-ink md:text-5xl">
             Gourmand et bon pour vous.
           </h2>
         </div>
@@ -40,7 +40,7 @@ export default function Benefits() {
               key={b.title}
               className="rounded-2xl border border-almond bg-cream p-6"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-honey/20 text-terracotta">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-azure/15 text-navy">
                 <svg
                   width="24"
                   height="24"
@@ -54,10 +54,10 @@ export default function Benefits() {
                   <path d={b.icon} />
                 </svg>
               </div>
-              <h3 className="mt-5 font-display text-lg font-bold text-cacao">
+              <h3 className="mt-5 font-display text-lg font-bold text-ink">
                 {b.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-cacao-soft">
+              <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {b.desc}
               </p>
             </div>
