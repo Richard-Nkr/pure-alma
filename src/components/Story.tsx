@@ -19,7 +19,7 @@ export default function Story() {
             Taroudant, pour une qualité irréprochable et une juste rémunération.
           </p>
           <p className="mt-4 leading-relaxed text-amla-cream/70">
-            Chaque pot Pure Alma naît d&apos;un broyage lent à la meule de pierre
+            Chaque pot ALMA naît d&apos;un broyage lent à la meule de pierre
             — amandes grillées, huile d&apos;argan et miel de montagne — sans
             aucun ajout. Une énergie brute, directement de la terre marocaine.
           </p>
@@ -48,7 +48,7 @@ export default function Story() {
           >
             <Image
               src="/images/img3.png"
-              alt="Amlou Pure Alma servi à table"
+              alt="Amlou ALMA servi à table"
               fill
               sizes="(max-width: 768px) 90vw, 448px"
               className="object-cover"

@@ -59,7 +59,7 @@ export default function Products() {
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-amla-blue-deep">
                 <Image
                   src={p.img}
-                  alt={`Pot ${p.name} — Pure Alma`}
+                  alt={`Pot ${p.name} — ALMA`}
                   fill
                   sizes="(max-width: 768px) 90vw, 360px"
                   className="object-cover"

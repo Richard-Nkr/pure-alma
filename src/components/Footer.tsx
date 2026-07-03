@@ -8,14 +8,15 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
-              <Image
-                src="/logo.png"
-                alt="Pure Alma"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
-              />
-              <span className="font-display text-2xl text-amla-yellow">Pure Alma</span>
+              <span className="block h-12 w-12 overflow-hidden rounded-full ring-1 ring-amla-yellow/30">
+                <Image
+                  src="/logo.png"
+                  alt="ALMA"
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 object-cover"
+                />
+              </span>
             </div>
             <p className="mt-4 max-w-sm leading-relaxed text-amla-cream/70">
               L&apos;amlou marocain artisanal, préparé à la main à partir
@@ -41,7 +42,7 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-amla-cream/70">
-              <li>bonjour@purealma.co</li>
+              <li>bonjour@alma.co</li>
               <li>Taroudant · Maroc</li>
               <li className="flex gap-3 pt-2">
                 <a href="#top" className="hover:text-amla-yellow">Instagram</a>
@@ -52,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-amla-yellow/15 pt-6 font-condensed text-xs uppercase tracking-wide text-amla-cream/50 sm:flex-row">
-          <p>© {year} Pure Alma. Tous droits réservés.</p>
+          <p>© {year} ALMA. Tous droits réservés.</p>
           <p>Fait avec passion entre l&apos;Atlas et votre table.</p>
         </div>
       </div>

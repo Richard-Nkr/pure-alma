@@ -18,16 +18,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-transparent">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <a href="#top" className="flex items-center gap-2">
-          <Image
-            src="/logo.png"
-            alt="Pure Alma"
-            width={44}
-            height={44}
-            className="h-11 w-11 object-contain"
-            priority
-          />
-          <span className="font-display text-2xl text-amla-yellow">Pure Alma</span>
+        <a href="#top" className="flex items-center gap-2" aria-label="ALMA">
+          <span className="block h-12 w-12 overflow-hidden rounded-full ring-1 ring-amla-yellow/30">
+            <Image
+              src="/logo.png"
+              alt="ALMA"
+              width={48}
+              height={48}
+              className="h-12 w-12 object-cover"
+              priority
+            />
+          </span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

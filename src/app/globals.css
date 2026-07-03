@@ -25,7 +25,7 @@
   --font-sans: var(--font-inter);
 }
 
-/* Charte graphique Pure Alma : surcharge des tokens Astryx (thème butter) */
+/* Charte graphique ALMA : surcharge des tokens Astryx (thème butter) */
 html[data-astryx-theme="butter"] {
   --color-accent: #f2b705;
   --color-accent-muted: #f2b70526;

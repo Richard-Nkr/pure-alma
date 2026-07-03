@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <Image
         src="/images/img6.png"
-        alt="Amlou Pure Alma aux amandes et huile d'argan"
+        alt="Amlou ALMA aux amandes et huile d'argan"
         fill
         priority
         sizes="100vw"
@@ -27,7 +27,7 @@ export default function Hero() {
         </span>
 
         <h1 className="mt-8 font-display text-7xl leading-[0.95] text-white drop-shadow-2xl sm:text-8xl md:text-9xl">
-          Pure Alma
+          ALMA
         </h1>
 
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">

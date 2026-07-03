@@ -13,7 +13,7 @@ const reviews = [
   },
   {
     quote:
-      "Enfin une tartinade saine que mes enfants adorent. Trois ingrédients, zéro cochonnerie. Bravo Pure Alma !",
+      "Enfin une tartinade saine que mes enfants adorent. Trois ingrédients, zéro cochonnerie. Bravo ALMA !",
     name: "Sofia M.",
     role: "Maman de deux gourmands",
   },
