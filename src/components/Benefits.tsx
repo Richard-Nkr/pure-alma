@@ -1,22 +1,20 @@
 "use client";
 
 import { Leaf, Zap, ShieldCheck, Sparkles } from "lucide-react";
-import { Heading } from "@astryxdesign/core/Heading";
-import { Text } from "@astryxdesign/core/Text";
 
 const benefits = [
   {
-    title: "Riche en bonnes graisses",
+    title: "Bonnes graisses",
     desc: "L'huile d'argan et les amandes apportent des acides gras insaturés et de la vitamine E.",
     Icon: Leaf,
   },
   {
-    title: "Source d'énergie",
+    title: "Énergie durable",
     desc: "Un carburant naturel idéal au petit-déjeuner ou avant l'effort, sans coup de barre.",
     Icon: Zap,
   },
   {
-    title: "Antioxydants naturels",
+    title: "Antioxydants",
     desc: "La vitamine E de l'argan aide à protéger les cellules du stress oxydatif.",
     Icon: ShieldCheck,
   },
@@ -29,32 +27,34 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section id="bienfaits" className="bg-body">
+    <section id="bienfaits" className="bg-amla-blue">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <Text as="p" type="label" color="accent">
-            BIENFAITS
-          </Text>
-          <Heading level={2} type="display-2" className="mt-4">
-            Gourmand et bon pour vous.
-          </Heading>
+          <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
+            Bienfaits
+          </p>
+          <h2 className="mt-4 font-display text-5xl text-white md:text-6xl">
+            Gourmand. Et bon pour toi.
+          </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b) => (
-            <div
-              key={b.title}
-              className="rounded-lg border border-border bg-surface p-6"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[var(--color-accent-muted)] text-[var(--color-accent)]">
-                <b.Icon size={24} strokeWidth={2} />
+            <div key={b.title} className="text-center sm:text-left">
+              <div className="relative inline-flex h-16 w-16 items-center justify-center">
+                <span
+                  aria-hidden
+                  className="absolute inset-0 animate-blob bg-amla-yellow"
+                  style={{ borderRadius: "42% 58% 63% 37% / 42% 44% 56% 58%" }}
+                />
+                <b.Icon size={28} strokeWidth={2.25} className="relative text-amla-blue" />
               </div>
-              <Heading level={3} className="mt-5 text-lg">
+              <h3 className="mt-5 font-condensed text-xl font-semibold uppercase tracking-wide text-white">
                 {b.title}
-              </Heading>
-              <Text color="secondary" className="mt-2 block">
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">
                 {b.desc}
-              </Text>
+              </p>
             </div>
           ))}
         </div>

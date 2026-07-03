@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Playfair_Display } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const shroomsGarden = localFont({
@@ -51,9 +51,9 @@ export default function RootLayout({
       lang="fr"
       data-theme="light"
       data-astryx-theme="butter"
-      className={`${geistSans.variable} ${playfair.variable} ${shroomsGarden.variable} h-full antialiased`}
+      className={`${inter.variable} ${oswald.variable} ${shroomsGarden.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-body text-primary">
+      <body className="min-h-full flex flex-col bg-amla-bg font-sans text-amla-text">
         <Providers>{children}</Providers>
       </body>
     </html>

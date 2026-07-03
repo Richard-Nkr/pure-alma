@@ -1,6 +1,4 @@
-import { Heading } from "@astryxdesign/core/Heading";
-import { Text } from "@astryxdesign/core/Text";
-import { Button } from "@astryxdesign/core/Button";
+import CtaButton from "./CtaButton";
 
 const ideas = [
   {
@@ -11,12 +9,12 @@ const ideas = [
   {
     step: "02",
     title: "Dans un porridge",
-    desc: "Une cuillère fondue dans un bol d'avoine ou de yaourt pour un petit-déj réconfortant.",
+    desc: "Une cuillère fondue dans un bol d'avoine ou de yaourt pour un petit-déj de champion.",
   },
   {
     step: "03",
-    title: "En topping de crêpes",
-    desc: "Remplacez la pâte à tartiner classique par une gourmandise sans sucre raffiné.",
+    title: "Avant le sport",
+    desc: "Une cuillère 30 min avant l'effort pour une énergie longue durée, sans pic de sucre.",
   },
   {
     step: "04",
@@ -27,28 +25,23 @@ const ideas = [
 
 export default function Usage() {
   return (
-    <section id="degustation" className="bg-surface">
+    <section id="degustation" className="bg-amla-bg">
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <div>
-            <Text as="p" type="label" color="accent">
-              COMMENT LE DÉGUSTER
-            </Text>
-            <Heading level={2} type="display-2" className="mt-4">
-              Du matin au soir, à toutes les sauces.
-            </Heading>
-            <Text as="p" type="large" color="secondary" className="mt-5 block">
+            <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow-deep">
+              Comment le déguster
+            </p>
+            <h2 className="mt-4 font-display text-5xl text-amla-blue md:text-6xl">
+              Du matin au run, à toutes les sauces.
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-amla-muted">
               L&apos;amlou n&apos;est pas qu&apos;une pâte à tartiner :
-              c&apos;est un allié de cuisine. Sucré ou salé, il révèle des saveurs
-              de noisette grillée dans toutes vos préparations.
-            </Text>
+              c&apos;est un allié de performance et de cuisine. Sucré ou salé, il
+              révèle des saveurs de noisette grillée dans toutes tes préparations.
+            </p>
             <div className="mt-8">
-              <Button
-                label="J'essaie chez moi"
-                href="#commander"
-                variant="primary"
-                size="lg"
-              />
+              <CtaButton label="J'essaie chez moi" href="#commander" />
             </div>
           </div>
 
@@ -56,17 +49,17 @@ export default function Usage() {
             {ideas.map((i) => (
               <div
                 key={i.step}
-                className="rounded-lg border border-border bg-body p-6"
+                className="rounded-md border border-amla-blue/10 bg-amla-surface p-6"
               >
-                <Text type="display-3" color="accent" weight="bold">
+                <span className="font-condensed text-4xl font-bold text-amla-yellow-deep">
                   {i.step}
-                </Text>
-                <Heading level={3} className="mt-3 text-lg">
+                </span>
+                <h3 className="mt-3 font-condensed text-xl font-semibold uppercase tracking-wide text-amla-blue">
                   {i.title}
-                </Heading>
-                <Text color="secondary" className="mt-2 block">
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-amla-muted">
                   {i.desc}
-                </Text>
+                </p>
               </div>
             ))}
           </div>

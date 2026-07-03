@@ -1,67 +1,53 @@
-import { Text } from "@astryxdesign/core/Text";
-
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="bg-amla-blue-deep">
       <div className="mx-auto max-w-6xl px-5 py-14">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent)] font-title text-lg text-[var(--color-on-accent)]">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-amla-yellow font-display text-lg text-amla-blue">
                 A
               </span>
-              <span className="font-title text-2xl text-primary">Pure Alma</span>
+              <span className="font-display text-2xl text-white">Pure Alma</span>
             </div>
-            <Text as="p" color="secondary" className="mt-4 block max-w-sm">
+            <p className="mt-4 max-w-sm leading-relaxed text-white/70">
               L&apos;amlou marocain artisanal, préparé à la main à partir
               d&apos;amandes, d&apos;huile d&apos;argan et de miel. 100% naturel,
               0% compromis.
-            </Text>
+            </p>
           </div>
 
           <div>
-            <Text as="p" type="label" className="uppercase">
+            <h3 className="font-condensed text-sm font-semibold uppercase tracking-wider text-amla-yellow">
               Boutique
-            </Text>
-            <ul className="mt-4 space-y-2">
-              {[
-                { href: "#saveurs", label: "Nos saveurs" },
-                { href: "#commander", label: "Commander" },
-                { href: "#bienfaits", label: "Bienfaits" },
-                { href: "#degustation", label: "Recettes" },
-              ].map((l) => (
-                <li key={l.href}>
-                  <a href={l.href} className="text-sm text-secondary hover:text-primary">
-                    {l.label}
-                  </a>
-                </li>
-              ))}
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-white/70">
+              <li><a href="#saveurs" className="hover:text-amla-yellow">Nos saveurs</a></li>
+              <li><a href="#commander" className="hover:text-amla-yellow">Commander</a></li>
+              <li><a href="#bienfaits" className="hover:text-amla-yellow">Bienfaits</a></li>
+              <li><a href="#degustation" className="hover:text-amla-yellow">Recettes</a></li>
             </ul>
           </div>
 
           <div>
-            <Text as="p" type="label" className="uppercase">
+            <h3 className="font-condensed text-sm font-semibold uppercase tracking-wider text-amla-yellow">
               Contact
-            </Text>
-            <ul className="mt-4 space-y-2 text-sm text-secondary">
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm text-white/70">
               <li>bonjour@purealma.co</li>
               <li>Taroudant · Maroc</li>
               <li className="flex gap-3 pt-2">
-                <a href="#top" className="hover:text-primary">Instagram</a>
-                <a href="#top" className="hover:text-primary">Facebook</a>
+                <a href="#top" className="hover:text-amla-yellow">Instagram</a>
+                <a href="#top" className="hover:text-amla-yellow">Facebook</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 sm:flex-row">
-          <Text type="supporting" color="secondary">
-            © {year} Pure Alma. Tous droits réservés.
-          </Text>
-          <Text type="supporting" color="secondary">
-            Fait avec passion entre l&apos;Atlas et votre table.
-          </Text>
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 font-condensed text-xs uppercase tracking-wide text-white/50 sm:flex-row">
+          <p>© {year} Pure Alma. Tous droits réservés.</p>
+          <p>Fait avec passion entre l&apos;Atlas et votre table.</p>
         </div>
       </div>
     </footer>

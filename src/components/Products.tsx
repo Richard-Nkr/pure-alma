@@ -1,9 +1,6 @@
 import Image from "next/image";
-import { Heading } from "@astryxdesign/core/Heading";
-import { Text } from "@astryxdesign/core/Text";
-import { Card } from "@astryxdesign/core/Card";
-import { Badge } from "@astryxdesign/core/Badge";
-import { Button } from "@astryxdesign/core/Button";
+import CtaButton from "./CtaButton";
+import Blob from "./Blob";
 
 const products = [
   {
@@ -34,61 +31,79 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="saveurs" className="bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-24">
+    <section id="saveurs" className="relative overflow-hidden bg-amla-bg">
+      <Blob className="-right-24 top-24 h-80 w-80 opacity-15" />
+      <div className="relative mx-auto max-w-6xl px-5 py-24">
         <div className="mx-auto max-w-2xl text-center">
-          <Text as="p" type="label" color="accent">
-            NOS SAVEURS
-          </Text>
-          <Heading level={2} type="display-2" className="mt-4">
+          <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow-deep">
+            Nos saveurs
+          </p>
+          <h2 className="mt-4 font-display text-5xl text-amla-blue md:text-6xl">
             Trois pots, une même exigence.
-          </Heading>
-          <Text as="p" type="large" color="secondary" className="mt-4 block">
+          </h2>
+          <p className="mt-4 text-lg text-amla-muted">
             Chaque variété est préparée en petits lots pour préserver les arômes.
-          </Text>
+          </p>
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {products.map((p) => (
-            <Card
-              key={p.name}
-              padding={0}
-              variant={p.featured ? "blue" : "default"}
-              className="flex flex-col overflow-hidden transition-transform hover:-translate-y-2"
-            >
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-body">
-                <Image
-                  src={p.img}
-                  alt={`Pot ${p.name} — Pure Alma`}
-                  fill
-                  sizes="(max-width: 768px) 90vw, 360px"
-                  className="object-cover"
-                />
-                {p.featured && (
-                  <div className="absolute left-4 top-4">
-                    <Badge variant="info" label="Le plus aimé" />
+          {products.map((p) => {
+            const isNavy = p.featured;
+            return (
+              <div
+                key={p.name}
+                className={`flex flex-col overflow-hidden rounded-md border shadow-sm transition-transform hover:-translate-y-2 ${
+                  isNavy
+                    ? "border-amla-blue bg-amla-blue"
+                    : "border-amla-blue/10 bg-amla-surface"
+                }`}
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-amla-bg">
+                  <Image
+                    src={p.img}
+                    alt={`Pot ${p.name} — Pure Alma`}
+                    fill
+                    sizes="(max-width: 768px) 90vw, 360px"
+                    className="object-cover"
+                  />
+                  {p.featured && (
+                    <span className="absolute left-4 top-4 rounded-md bg-amla-yellow px-3 py-1 font-condensed text-xs font-semibold uppercase tracking-wide text-amla-blue">
+                      Le plus aimé
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-6 text-center">
+                  <h3
+                    className={`font-display text-2xl ${
+                      isNavy ? "text-white" : "text-amla-blue"
+                    }`}
+                  >
+                    {p.name}
+                  </h3>
+                  <p className="mt-1 font-condensed text-sm font-semibold uppercase tracking-wide text-amla-yellow-deep">
+                    {p.tagline}
+                  </p>
+                  <p
+                    className={`mt-4 flex-1 text-sm leading-relaxed ${
+                      isNavy ? "text-white/75" : "text-amla-muted"
+                    }`}
+                  >
+                    {p.desc}
+                  </p>
+                  <div className="mt-6 flex items-center justify-between">
+                    <span
+                      className={`font-condensed text-3xl font-bold ${
+                        isNavy ? "text-amla-yellow" : "text-amla-blue"
+                      }`}
+                    >
+                      {p.price}
+                    </span>
+                    <CtaButton label="Ajouter" href="#commander" size="md" />
                   </div>
-                )}
-              </div>
-              <div className="flex flex-1 flex-col gap-2 p-6 text-center">
-                <Heading level={3} className="text-xl">
-                  {p.name}
-                </Heading>
-                <Text type="label" color="accent">
-                  {p.tagline}
-                </Text>
-                <Text color="secondary" className="mt-2 block flex-1">
-                  {p.desc}
-                </Text>
-                <div className="mt-4 flex items-center justify-between">
-                  <Text type="large" weight="bold">
-                    {p.price}
-                  </Text>
-                  <Button label="Ajouter" href="#commander" variant="primary" />
                 </div>
               </div>
-            </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

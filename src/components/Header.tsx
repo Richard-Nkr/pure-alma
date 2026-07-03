@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@astryxdesign/core/Button";
+import CtaButton from "./CtaButton";
 
 const links = [
   { href: "#produit", label: "Le produit" },
@@ -15,13 +15,13 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-surface/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-amla-blue/10 bg-amla-bg/90 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent)] font-title text-lg text-[var(--color-on-accent)]">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-amla-blue font-display text-lg text-amla-yellow">
             A
           </span>
-          <span className="font-title text-2xl text-primary">Pure Alma</span>
+          <span className="font-display text-2xl text-amla-blue">Pure Alma</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -29,7 +29,7 @@ export default function Header() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium text-secondary transition-colors hover:text-primary"
+                className="font-condensed text-sm font-medium uppercase tracking-wide text-amla-blue/80 transition-colors hover:text-amla-blue"
               >
                 {l.label}
               </a>
@@ -38,7 +38,7 @@ export default function Header() {
         </ul>
 
         <div className="hidden md:block">
-          <Button label="Commander" href="#commander" variant="primary" />
+          <CtaButton label="Commander" href="#commander" size="md" />
         </div>
 
         <button
@@ -46,7 +46,7 @@ export default function Header() {
           aria-label="Menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-primary md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-amla-blue md:hidden"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -59,27 +59,21 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-surface md:hidden">
+        <div className="border-t border-amla-blue/10 bg-amla-bg md:hidden">
           <ul className="flex flex-col px-5 py-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-sm font-medium text-secondary"
+                  className="block py-2 font-condensed text-sm font-medium uppercase tracking-wide text-amla-blue/80"
                 >
                   {l.label}
                 </a>
               </li>
             ))}
             <li className="pt-2">
-              <a
-                href="#commander"
-                onClick={() => setOpen(false)}
-                className="block rounded-md bg-[var(--color-accent)] px-5 py-2.5 text-center text-sm font-semibold text-[var(--color-on-accent)]"
-              >
-                Commander
-              </a>
+              <CtaButton label="Commander" href="#commander" size="md" className="w-full" />
             </li>
           </ul>
         </div>
