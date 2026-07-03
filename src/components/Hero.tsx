@@ -15,7 +15,7 @@ export default function Hero() {
     >
       <div className="relative h-[calc(100svh-32px)] w-full overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
         <Image
-          src="/images/img9.png"
+          src="/images/img9-clean.png"
           alt="Amlou artisanal ALMA"
           fill
           priority
