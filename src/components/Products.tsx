@@ -14,7 +14,7 @@ const products = [
     tagline: "Plus de cacao",
     desc: "Notre traditionnel relevé d'une pointe de cacao cru pour une gourmandise profonde.",
     price: "14€",
-    img: "/images/img6.png",
+    img: "/images/img1.png",
     featured: true,
   },
   {

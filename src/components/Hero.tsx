@@ -41,13 +41,13 @@ export default function Hero() {
 
         <div className="relative mt-14 flex w-full justify-center">
           <div className="absolute inset-0 m-auto h-72 w-72 rounded-full bg-gradient-to-br from-azure/30 to-gold/25 blur-2xl" />
-          <div className="animate-float relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border-4 border-cream shadow-2xl">
+          <div className="animate-float relative aspect-square w-full max-w-2xl overflow-hidden rounded-[2rem] border-4 border-cream shadow-2xl">
             <Image
-              src="/images/img1.png"
+              src="/images/img6.png"
               alt="Pot d'amlou Pure Alma aux amandes et huile d'argan"
               fill
               priority
-              sizes="(max-width: 768px) 90vw, 448px"
+              sizes="(max-width: 768px) 92vw, 672px"
               className="object-cover"
             />
           </div>
