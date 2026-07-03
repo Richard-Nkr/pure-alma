@@ -28,7 +28,7 @@ export default function Hero() {
 
         <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
           <nav className="grid grid-cols-3 items-center gap-2">
-            <div className="flex items-center gap-3 sm:gap-8">
+            <div className="flex items-center justify-evenly gap-3 sm:gap-8">
               {leftLinks.map((l) => (
                 <a
                   key={l.label}
@@ -48,7 +48,7 @@ export default function Hero() {
               AMLA
             </a>
 
-            <div className="flex items-center justify-end gap-3 sm:gap-8">
+            <div className="flex items-center justify-evenly gap-3 sm:gap-8">
               {rightLinks.map((l) => (
                 <a
                   key={l.label}
