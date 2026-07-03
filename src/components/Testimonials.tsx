@@ -39,7 +39,7 @@ export default function Testimonials() {
           <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
             Ils en raffolent
           </p>
-          <h2 className="mt-4 font-display text-5xl text-amla-yellow md:text-6xl">
+          <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight text-amla-yellow md:text-5xl">
             Noté 4,9/5 par nos gourmands.
           </h2>
         </div>

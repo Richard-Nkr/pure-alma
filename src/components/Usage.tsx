@@ -32,7 +32,7 @@ export default function Usage() {
             <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
               Comment le déguster
             </p>
-            <h2 className="mt-4 font-display text-5xl text-amla-yellow md:text-6xl">
+            <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight text-amla-yellow md:text-5xl">
               Du matin au run, à toutes les sauces.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-amla-cream/85">

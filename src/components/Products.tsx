@@ -38,7 +38,7 @@ export default function Products() {
           <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
             Nos saveurs
           </p>
-          <h2 className="mt-4 font-display text-5xl text-amla-yellow md:text-6xl">
+          <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight text-amla-yellow md:text-5xl">
             Trois pots, une même exigence.
           </h2>
           <p className="mt-4 text-lg text-amla-cream/80">
@@ -71,7 +71,7 @@ export default function Products() {
                 )}
               </div>
               <div className="flex flex-1 flex-col p-6 text-center">
-                <h3 className="font-display text-2xl text-amla-yellow">
+                <h3 className="font-sans text-xl font-bold tracking-tight text-amla-yellow">
                   {p.name}
                 </h3>
                 <p className="mt-1 font-condensed text-sm font-semibold uppercase tracking-wide text-amla-yellow/80">

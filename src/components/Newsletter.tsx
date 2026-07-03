@@ -14,7 +14,7 @@ export default function Newsletter() {
         <div className="relative overflow-hidden rounded-md bg-amla-blue-light px-6 py-16 text-center ring-1 ring-amla-yellow/20 sm:px-16">
           <Blob className="-right-16 -top-16 h-64 w-64 opacity-25" />
           <div className="relative mx-auto max-w-xl">
-            <h2 className="font-display text-5xl leading-tight text-amla-yellow md:text-6xl">
+            <h2 className="font-sans text-4xl font-bold leading-tight tracking-tight text-amla-yellow md:text-5xl">
               Reçois ton premier pot.
             </h2>
             <p className="mt-4 text-lg text-amla-cream/85">

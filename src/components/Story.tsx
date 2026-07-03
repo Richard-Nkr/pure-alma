@@ -9,7 +9,7 @@ export default function Story() {
           <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
             Notre histoire
           </p>
-          <h2 className="mt-4 font-display text-5xl leading-tight text-amla-yellow md:text-6xl">
+          <h2 className="mt-4 font-sans text-4xl font-bold leading-tight tracking-tight text-amla-yellow md:text-5xl">
             Née dans l&apos;Atlas, taillée pour l&apos;effort.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-amla-cream/85">
