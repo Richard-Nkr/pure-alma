@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +12,12 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
+});
+
+const shroomsGarden = localFont({
+  src: "./fonts/Shrooms_Garden.ttf",
+  variable: "--font-shrooms",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${playfair.variable} ${shroomsGarden.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
         {children}
