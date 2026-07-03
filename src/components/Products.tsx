@@ -22,7 +22,7 @@ const products = [
     tagline: "Sans miel",
     desc: "Uniquement amandes et huile d'argan. Idéal pour les recettes salées et le sport.",
     price: "13€",
-    img: "/images/img1.png",
+    img: "/images/img5.png",
     featured: false,
   },
 ];
