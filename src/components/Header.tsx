@@ -16,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent">
+    <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center gap-2" aria-label="ALMA">
           <span className="block h-12 w-12 overflow-hidden rounded-full ring-1 ring-amla-yellow/30">
