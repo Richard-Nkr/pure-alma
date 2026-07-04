@@ -29,13 +29,13 @@ export default function Superfood() {
   return (
     <section
       id="superfood"
-      className="border-x-[16px] border-b-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px] sm:border-b-[22px]"
+      className="rounded-b-[28px] border-x-[16px] border-b-[16px] border-amla-yellow bg-amla-blue sm:rounded-b-[40px] sm:border-x-[22px] sm:border-b-[22px]"
     >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           {/* Image */}
           <div className="order-1 md:order-none">
-            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden border-[8px] border-amla-yellow sm:border-[12px]">
+            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border-[8px] border-amla-yellow sm:border-[12px]">
               <Image
                 src="/images/img3.png"
                 alt="Amlou ALMA, superfood marocain"
