@@ -13,15 +13,18 @@ export default function Hero() {
       id="top"
       className="border-[16px] border-amla-yellow bg-amla-blue sm:border-[22px]"
     >
-      <div className="relative h-[calc(100svh-32px)] w-full overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
-        <Image
-          src="/images/bg10.png"
-          alt="Amlou artisanal ALMA"
-          fill
-          priority
-          sizes="100vw"
-          className="object-contain object-top"
-        />
+      <div className="relative flex h-[calc(100svh-32px)] w-full flex-col overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
+        {/* photo 4:3 — moitié haute de l'écran */}
+        <div className="relative aspect-[4/3] max-h-[52svh] w-full shrink-0 overflow-hidden">
+          <Image
+            src="/images/bg10.png"
+            alt="Amlou artisanal ALMA"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
 
         {/* dégradé subtil pour la lisibilité de la nav */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
