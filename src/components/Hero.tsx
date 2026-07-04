@@ -15,14 +15,14 @@ export default function Hero() {
     >
       <div className="relative flex h-[calc(100svh-32px)] w-full flex-col overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
         {/* photo 4:3 — moitié haute de l'écran */}
-        <div className="relative aspect-[3/4] max-h-[80svh] w-full shrink-0 overflow-hidden md:aspect-[4/3] md:max-h-[72svh]">
+        <div className="relative aspect-[3/4] max-h-[80svh] w-full shrink-0 overflow-hidden md:aspect-[16/9] md:max-h-[80svh]">
           <Image
             src="/images/bg10.png"
             alt="Amlou artisanal ALMA"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center md:object-contain"
           />
         </div>
 
