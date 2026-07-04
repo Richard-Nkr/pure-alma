@@ -17,7 +17,7 @@ export default function Hero() {
         {/* photo 4:3 — moitié haute de l'écran */}
         <div className="relative h-full w-full shrink-0 overflow-hidden">
           <Image
-            src="/images/bg10.png"
+            src="/images/bg11.png"
             alt="Amlou artisanal ALMA"
             fill
             priority
