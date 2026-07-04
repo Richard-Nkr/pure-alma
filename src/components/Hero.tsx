@@ -15,12 +15,12 @@ export default function Hero() {
     >
       <div className="relative h-[calc(100svh-32px)] w-full overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
         <Image
-          src="/images/bg9.png"
+          src="/images/bg10.png"
           alt="Amlou artisanal ALMA"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-contain md:object-cover"
         />
 
         {/* dégradé subtil pour la lisibilité de la nav */}
