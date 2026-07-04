@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 const leftLinks = [
-  { href: "#", label: "À propos" },
-  { href: "#", label: "La recette" },
+  { href: "#superfood", label: "À propos" },
+  { href: "#superfood", label: "La recette" },
 ];
 
 const rightLinks = [{ href: "#", label: "Contact" }];
@@ -11,9 +11,9 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="border-[16px] border-amla-yellow bg-amla-blue sm:border-[22px]"
+      className="border-[16px] border-b-0 border-amla-yellow bg-amla-blue sm:border-[22px] sm:border-b-0"
     >
-      <div className="relative flex h-[calc(100svh-32px)] w-full flex-col overflow-hidden bg-amla-blue sm:h-[calc(100svh-44px)]">
+      <div className="relative flex h-[calc(100svh-16px)] w-full flex-col overflow-hidden bg-amla-blue sm:h-[calc(100svh-22px)]">
         {/* photo 4:3 — moitié haute de l'écran */}
         <div className="relative aspect-[3/4] max-h-[80svh] w-full shrink-0 overflow-hidden md:aspect-auto md:h-full md:max-h-none">
           <Image
