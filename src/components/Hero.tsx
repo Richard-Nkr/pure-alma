@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
 
         <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
-          <nav className="flex flex-col items-center gap-3 md:grid md:grid-cols-3 md:items-center md:gap-4">
+          <nav className="flex flex-col items-center gap-3 md:flex md:flex-row md:items-center md:justify-between">
             <a
               href="#top"
               className="text-center font-display text-5xl leading-none text-amla-yellow sm:text-6xl lg:text-7xl"
@@ -39,36 +39,12 @@ export default function Hero() {
               AMLA
             </a>
 
-            <div className="flex items-center justify-center gap-4 sm:gap-8 md:hidden">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 md:order-none">
               {[...leftLinks, ...rightLinks].map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
-                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-sm"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </div>
-
-            <div className="hidden items-center justify-end gap-6 sm:gap-10 md:flex">
-              {leftLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-xl"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </div>
-
-            <div className="hidden items-center justify-start gap-6 sm:gap-10 md:flex">
-              {rightLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="whitespace-nowrap font-sans text-sm font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-xl"
+                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-sm md:text-lg lg:text-xl"
                 >
                   {l.label}
                 </a>
