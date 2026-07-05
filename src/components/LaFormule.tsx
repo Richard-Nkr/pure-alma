@@ -34,8 +34,26 @@ export default function LaFormule() {
           <span className="text-amla-yellow">0 ARTIFICE.</span>
         </h2>
 
-        <div className="mx-auto mt-14 max-w-md overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-          <div className="relative aspect-square">
+        <div className="mt-16 grid items-center gap-12 md:grid-cols-2 md:gap-16">
+          <div className="space-y-10 sm:space-y-14">
+            {ingredients.map((i) => (
+              <div key={i.number} className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
+                <span className="font-condensed text-6xl font-bold leading-none text-amla-yellow/30 sm:text-7xl">
+                  {i.number}
+                </span>
+                <div>
+                  <h3 className="font-condensed text-2xl font-bold uppercase tracking-wide text-amla-yellow">
+                    {i.title}
+                  </h3>
+                  <p className="mt-3 max-w-xl text-lg leading-relaxed text-amla-cream/80">
+                    {i.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px] md:order-none">
             <Image
               src="/images/img3.png"
               alt="Amlou artisanal ALMA — 3 ingrédients"
@@ -44,24 +62,6 @@ export default function LaFormule() {
               className="object-cover"
             />
           </div>
-        </div>
-
-        <div className="mt-16 space-y-10 sm:space-y-14">
-          {ingredients.map((i) => (
-            <div key={i.number} className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-              <span className="font-condensed text-6xl font-bold leading-none text-amla-yellow/30 sm:text-7xl">
-                {i.number}
-              </span>
-              <div>
-                <h3 className="font-condensed text-2xl font-bold uppercase tracking-wide text-amla-yellow">
-                  {i.title}
-                </h3>
-                <p className="mt-3 max-w-xl text-lg leading-relaxed text-amla-cream/80">
-                  {i.desc}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
 
         <div className="mt-16 flex justify-center border-t border-amla-yellow/20 pt-10">
