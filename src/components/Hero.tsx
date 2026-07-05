@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const leftLinks = [
-  { href: "#superfood", label: "À propos" },
-  { href: "#superfood", label: "La recette" },
+  { href: "#formule", label: "À propos" },
+  { href: "#kpis", label: "La recette" },
 ];
 
-const rightLinks = [{ href: "#", label: "Contact" }];
+const rightLinks = [{ href: "#quotidien", label: "Contact" }];
 
 export default function Hero() {
   return (

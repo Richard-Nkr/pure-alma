@@ -1,11 +1,17 @@
 import Hero from "@/components/Hero";
-import Superfood from "@/components/Superfood";
+import LaFormule from "@/components/LaFormule";
+import Kpis from "@/components/Kpis";
+import LesBienfaits from "@/components/LesBienfaits";
+import LeQuotidien from "@/components/LeQuotidien";
 
 export default function Home() {
   return (
     <main className="flex-1">
       <Hero />
-      <Superfood />
+      <LaFormule />
+      <Kpis />
+      <LesBienfaits />
+      <LeQuotidien />
     </main>
   );
 }
