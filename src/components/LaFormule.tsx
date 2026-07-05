@@ -28,10 +28,14 @@ export default function LaFormule() {
         <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
           La Formule
         </p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-center font-sans text-4xl font-extrabold leading-[1.05] tracking-tight text-amla-cream sm:text-5xl">
-          3 TRÉSORS DE LA NATURE.
-          <br />
-          <span className="text-amla-yellow">0 ARTIFICE.</span>
+        <h2 className="mx-auto mt-4 max-w-2xl text-center">
+          <span className="font-condensed text-7xl font-bold leading-none text-amla-yellow sm:text-8xl">3</span>
+          <span className="mt-2 block font-sans text-4xl font-extrabold leading-[1.05] tracking-tight text-amla-cream sm:text-5xl">
+            TRÉSORS DE LA NATURE.
+          </span>
+          <span className="mt-3 block font-condensed text-5xl font-bold uppercase leading-none tracking-tight text-amla-yellow sm:text-6xl">
+            0 ARTIFICE.
+          </span>
         </h2>
 
         <div className="mt-16 grid items-center gap-12 md:grid-cols-2 md:gap-16">
