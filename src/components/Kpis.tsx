@@ -32,13 +32,13 @@ export default function Kpis() {
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
             <div key={k.label} className="text-center">
-              <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-6xl">
+              <span className="block font-condensed font-bold leading-none text-amla-yellow" style={{ fontSize: "clamp(3.5rem, 8vw, 5rem)" }}>
                 {k.value}
               </span>
-              <span className="mt-2 block font-condensed text-sm font-bold uppercase tracking-wide text-amla-cream">
+              <span className="mt-2 block font-condensed font-bold uppercase tracking-wide text-amla-cream" style={{ fontSize: "clamp(1rem, 2.5vw, 1.25rem)" }}>
                 {k.label}
               </span>
-              <span className="mt-1 block font-condensed text-xs uppercase tracking-wider text-amla-cream/50">
+              <span className="mt-1 block font-condensed uppercase tracking-wider text-amla-cream/50" style={{ fontSize: "clamp(0.8rem, 1.5vw, 0.95rem)" }}>
                 {k.sub}
               </span>
             </div>
