@@ -35,7 +35,11 @@ export default function LaFormule() {
           className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
-          3 Ingrédients &nbsp;•&nbsp; 0 Additif &nbsp;•&nbsp; 100 % Naturel
+          <span className="block sm:contents">3 Ingrédients</span>
+          <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
+          <span className="block sm:contents">0 Additif</span>
+          <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
+          <span className="block sm:contents">100 % Naturel</span>
         </h2>
 
         <div className="mt-16 grid items-center gap-12 md:grid-cols-2 md:gap-16">
