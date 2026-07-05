@@ -39,7 +39,19 @@ export default function Hero() {
               AMLA
             </a>
 
-            <div className="flex items-center justify-center gap-6 sm:gap-10 md:justify-end md:order-first">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 md:hidden">
+              {[...leftLinks, ...rightLinks].map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="whitespace-nowrap font-sans text-xs font-bold uppercase tracking-[0.25em] text-amla-yellow transition-opacity hover:opacity-70 sm:text-sm"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+
+            <div className="hidden items-center justify-end gap-6 sm:gap-10 md:flex">
               {leftLinks.map((l) => (
                 <a
                   key={l.label}
@@ -51,7 +63,7 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="flex items-center justify-center gap-6 sm:gap-10 md:justify-start">
+            <div className="hidden items-center justify-start gap-6 sm:gap-10 md:flex">
               {rightLinks.map((l) => (
                 <a
                   key={l.label}
