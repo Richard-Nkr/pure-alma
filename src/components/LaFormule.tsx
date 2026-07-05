@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ingredients = [
   {
     number: "01",
@@ -31,6 +33,18 @@ export default function LaFormule() {
           <br />
           <span className="text-amla-yellow">0 ARTIFICE.</span>
         </h2>
+
+        <div className="mx-auto mt-14 max-w-md overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/img3.png"
+              alt="Amlou artisanal ALMA — 3 ingrédients"
+              fill
+              sizes="(max-width: 768px) 90vw, 448px"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
         <div className="mt-16 space-y-10 sm:space-y-14">
           {ingredients.map((i) => (
