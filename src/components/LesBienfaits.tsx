@@ -24,10 +24,16 @@ export default function LesBienfaits() {
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-28">
-        <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
+        <p
+          className="text-center font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
+          style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
+        >
           Corps & Performance
         </p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-center font-sans text-4xl font-extrabold leading-[1.05] tracking-tight text-amla-cream sm:text-5xl">
+        <h2
+          className="mx-auto mt-4 max-w-2xl text-center font-sans font-extrabold leading-[1.05] tracking-tight text-amla-cream"
+          style={{ fontSize: "clamp(2rem, 5.5vw, 3rem)" }}
+        >
           LA PERFORMANCE
           <br />
           <span className="text-amla-yellow">AU NATUREL</span>

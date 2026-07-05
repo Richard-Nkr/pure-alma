@@ -25,10 +25,16 @@ export default function LaFormule() {
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-28">
-        <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
+        <p
+          className="text-center font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
+          style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
+        >
           La Formule
         </p>
-        <h2 className="mx-auto mt-4 max-w-2xl text-center font-condensed text-5xl font-bold uppercase tracking-tight text-amla-yellow sm:text-6xl">
+        <h2
+          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
+          style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
+        >
           3 Ingrédients &nbsp;•&nbsp; 0 Additif &nbsp;•&nbsp; 100 % Naturel
         </h2>
 
