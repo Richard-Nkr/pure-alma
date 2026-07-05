@@ -30,8 +30,16 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-amla-blue/70 to-transparent" />
 
         <header className="absolute inset-x-0 top-0 z-10 px-5 py-6 sm:px-10">
-          <nav className="grid grid-cols-3 items-center gap-4">
-            <div className="flex items-center justify-end gap-6 sm:gap-10">
+          <nav className="flex flex-col items-center gap-3 md:grid md:grid-cols-3 md:items-center md:gap-4">
+            <a
+              href="#top"
+              className="text-center font-display text-5xl leading-none text-amla-yellow sm:text-6xl lg:text-7xl"
+              aria-label="AMLA"
+            >
+              AMLA
+            </a>
+
+            <div className="flex items-center justify-center gap-6 sm:gap-10 md:justify-end md:order-first">
               {leftLinks.map((l) => (
                 <a
                   key={l.label}
@@ -43,15 +51,7 @@ export default function Hero() {
               ))}
             </div>
 
-            <a
-              href="#top"
-              className="text-center font-display text-5xl leading-none text-amla-yellow sm:text-6xl lg:text-7xl"
-              aria-label="AMLA"
-            >
-              AMLA
-            </a>
-
-            <div className="flex items-center justify-start gap-6 sm:gap-10">
+            <div className="flex items-center justify-center gap-6 sm:gap-10 md:justify-start">
               {rightLinks.map((l) => (
                 <a
                   key={l.label}
