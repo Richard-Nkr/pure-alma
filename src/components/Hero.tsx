@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="relative flex h-[calc(100svh-32px)] w-full flex-col overflow-hidden rounded-t-[14px] bg-amla-blue sm:h-[calc(100svh-44px)] sm:rounded-t-[22px]">
         {/* photo 4:3 — moitié haute de l'écran */}
         <div className="relative flex h-full w-full items-center justify-center overflow-hidden md:block">
-          <div className="relative aspect-[16/10] w-full max-w-[90%] overflow-hidden md:h-full md:w-full md:max-w-none md:aspect-auto">
+          <div className="relative aspect-[16/10] w-full max-w-[60%] overflow-hidden md:h-full md:w-full md:max-w-none md:aspect-auto">
             <Image
               src="/images/bg12.png"
               alt="Amlou artisanal ALMA"
