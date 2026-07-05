@@ -32,7 +32,7 @@ export default function Kpis() {
           L&apos;ÉNERGIE EN CHIFFRES
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
             <div key={k.label} className="text-center">
               <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-6xl">
