@@ -3,17 +3,17 @@ import Image from "next/image";
 const ingredients = [
   {
     number: "01",
-    title: "Les Amandes Torréfiées",
+    title: "Amandes",
     desc: "La base brute. Riches en protéines végétales et en magnésium, elles offrent une texture onctueuse tout en favorisant la satiété et la récupération.",
   },
   {
     number: "02",
-    title: "L'Huile d'Argan Précieuse",
+    title: "Huile d'Argan",
     desc: "L'or du Maroc. Extraite des noix de l'arganier, elle apporte une saveur unique et protège votre système cardiovasculaire.",
   },
   {
     number: "03",
-    title: "Le Miel de Montagne",
+    title: "Miel",
     desc: "La touche douce. Un sucre brut et naturel pour un regain d'énergie immédiat, sans crash glycémique.",
   },
 ];
