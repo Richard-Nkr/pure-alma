@@ -38,6 +38,12 @@ export default function LaFormule() {
           </span>
         </h2>
 
+        <div className="mt-8 flex justify-center">
+          <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
+            3 Ingrédients &nbsp;•&nbsp; 0 Additif &nbsp;•&nbsp; 100 % Naturel
+          </p>
+        </div>
+
         <div className="mt-16 grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="space-y-10 sm:space-y-14">
             {ingredients.map((i) => (
@@ -66,12 +72,6 @@ export default function LaFormule() {
               className="object-cover"
             />
           </div>
-        </div>
-
-        <div className="mt-16 flex justify-center border-t border-amla-yellow/20 pt-10">
-          <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
-            3 Ingrédients &nbsp;•&nbsp; 0 Additif &nbsp;•&nbsp; 100 % Naturel
-          </p>
         </div>
       </div>
     </section>
