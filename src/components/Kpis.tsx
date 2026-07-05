@@ -28,9 +28,6 @@ export default function Kpis() {
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <div className="mx-auto max-w-5xl px-6 py-14 sm:px-10 sm:py-20">
-        <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
-          L&apos;ÉNERGIE EN CHIFFRES
-        </p>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
