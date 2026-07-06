@@ -73,8 +73,8 @@ export default function Kpis() {
           className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
-          <span className="block">L&apos;Énergie</span>
-          <span className="block">En Chiffres</span>
+          <span className="block">Quelques</span>
+          <span className="block">Chiffres clés</span>
         </h2>
 
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
