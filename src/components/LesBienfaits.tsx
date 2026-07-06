@@ -31,12 +31,11 @@ export default function LesBienfaits() {
           Corps & Performance
         </p>
         <h2
-          className="mx-auto mt-4 max-w-2xl text-center font-sans font-extrabold leading-[1.05] tracking-tight text-amla-cream"
-          style={{ fontSize: "clamp(2rem, 5.5vw, 3rem)" }}
+          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
+          style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
-          LA PERFORMANCE
-          <br />
-          <span className="text-amla-yellow">AU NATUREL</span>
+          <span className="block">La Performance</span>
+          <span className="block">Au Naturel</span>
         </h2>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-amla-cream/80">

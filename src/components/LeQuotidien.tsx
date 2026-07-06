@@ -12,12 +12,11 @@ export default function LeQuotidien() {
           Le Quotidien
         </p>
         <h2
-          className="mx-auto mt-4 max-w-2xl font-sans font-extrabold leading-[1.05] tracking-tight text-amla-cream"
-          style={{ fontSize: "clamp(2rem, 5.5vw, 3rem)" }}
+          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
+          style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
-          DANS VOTRE
-          <br />
-          <span className="text-amla-yellow">QUOTIDIEN</span>
+          <span className="block">Dans Votre</span>
+          <span className="block">Quotidien</span>
         </h2>
 
         <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-amla-cream/80">

@@ -62,10 +62,20 @@ export default function Kpis() {
       id="kpis"
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
-      <div ref={ref} className="mx-auto max-w-5xl px-6 py-14 sm:px-10 sm:py-20">
-        <p className="text-center font-condensed text-sm font-bold uppercase tracking-[0.3em] text-amla-yellow">
+      <div ref={ref} className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-28">
+        <p
+          className="text-center font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
+          style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
+        >
           L&apos;ÉNERGIE EN CHIFFRES
         </p>
+        <h2
+          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
+          style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
+        >
+          <span className="block">L&apos;Énergie</span>
+          <span className="block">En Chiffres</span>
+        </h2>
 
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
