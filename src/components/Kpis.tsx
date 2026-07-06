@@ -93,10 +93,10 @@ export default function Kpis() {
                   <>{k.prefix ?? ""}0{k.suffix ?? ""}</>
                 )}
               </span>
-              <span className="mt-2 block font-condensed text-sm font-bold uppercase tracking-wide text-amla-cream">
+              <span className="mt-2 block font-condensed text-xl font-bold uppercase tracking-wide text-amla-cream sm:text-2xl">
                 {k.label}
               </span>
-              <span className="mt-1 block font-condensed text-xs uppercase tracking-wider text-amla-cream/50">
+              <span className="mt-1 block font-condensed text-base uppercase tracking-wider text-amla-cream/50 sm:text-lg">
                 {k.sub}
               </span>
             </div>
