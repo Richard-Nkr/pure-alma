@@ -48,7 +48,7 @@ export default function LesBienfaits() {
           {bienfaits.map((b) => (
             <div
               key={b.title}
-              className="rounded-2xl border border-amla-yellow/20 bg-amla-blue-light p-6 sm:p-8"
+              className="rounded-3xl border border-amla-yellow/20 bg-amla-blue-light p-6 sm:p-8"
             >
               <h3 className="font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow">
                 {b.title}

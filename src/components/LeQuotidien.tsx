@@ -33,7 +33,7 @@ export default function LeQuotidien() {
 
         <a
           href="#"
-          className="mt-12 inline-block rounded-md bg-amla-yellow px-10 py-4 font-condensed text-xl font-bold uppercase tracking-wide text-amla-blue transition-transform hover:scale-105"
+          className="mt-12 inline-block rounded-xl bg-amla-yellow px-10 py-4 font-condensed text-xl font-bold uppercase tracking-wide text-amla-blue transition-transform hover:scale-105"
         >
           Je commande mon pot
         </a>
