@@ -76,7 +76,7 @@ export default function Kpis() {
                     end={k.value}
                     prefix={k.prefix ?? ""}
                     suffix={k.suffix ?? ""}
-                    duration={2}
+                    duration={1}
                     useEasing
                   />
                 ) : (
