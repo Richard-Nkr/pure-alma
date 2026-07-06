@@ -80,7 +80,7 @@ export default function Kpis() {
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
             <div key={k.label} className="text-center">
-              <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-6xl">
+              <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-7xl lg:text-8xl">
                 {start ? (
                   <CountUp
                     end={k.value}
@@ -101,21 +101,6 @@ export default function Kpis() {
               </span>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 space-y-2 text-center">
-          <p className="text-lg leading-relaxed text-amla-cream/80">
-            <strong className="text-amla-yellow">20g de protéines végétales</strong> pour 100g — issues exclusivement de nos amandes doucement torréfiées.
-          </p>
-          <p className="text-lg leading-relaxed text-amla-cream/80">
-            <strong className="text-amla-yellow">+80% de bons lipides</strong> (Oméga 6 & 9) — le carburant naturel par excellence pour l&apos;endurance.
-          </p>
-          <p className="text-lg leading-relaxed text-amla-cream/80">
-            <strong className="text-amla-yellow">3× plus de vitamine E</strong> que l&apos;huile d&apos;olive — un bouclier antioxydant puissant.
-          </p>
-          <p className="text-lg leading-relaxed text-amla-cream/80">
-            <strong className="text-amla-yellow">0 sucre raffiné</strong> — l&apos;énergie longue durée du miel de montagne, sans le crash glycémique.
-          </p>
         </div>
       </div>
     </section>
