@@ -1,19 +1,19 @@
 const bienfaits = [
   {
-    title: "Richesse Nutritionnelle",
-    desc: "Des protéines végétales, du magnésium et des acides gras essentiels dans chaque cuillère. Un concentré naturel de nutriments.",
+    title: "Boost Protéiné",
+    desc: "20g de protéines végétales pour 100g, issues des amandes torréfiées. Soutien musculaire et satiété.",
   },
   {
-    title: "Énergie Longue Durée",
-    desc: "Les bons lipides et le miel de montagne diffusent une énergie constante, sans pic ni crash glycémique.",
+    title: "Lipides Sains",
+    desc: "Oméga 6 & 9 de l'huile d'argan et des amandes. Carburant naturel pour l'endurance.",
   },
   {
-    title: "Protection Cardiovasculaire",
-    desc: "Les oméga 6 & 9 de l'huile d'argan et des amandes contribuent à fluidifier la circulation sanguine.",
+    title: "Vitamine E",
+    desc: "L'huile d'argan en concentre des niveaux exceptionnels. Bouclier antioxydant puissant.",
   },
   {
-    title: "Zéro Additif",
-    desc: "Trois ingrédients seulement. Aucun conservateur, aucun sucre raffiné, aucun artifice. Juste la pureté de la terre marocaine.",
+    title: "Zéro Sucre Raffiné",
+    desc: "Uniquement le miel de montagne. Énergie longue durée sans crash glycémique.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function Kpis() {
               key={b.title}
               className="rounded-3xl border border-amla-yellow/20 bg-amla-blue-light p-6 sm:p-8"
             >
-              <h3 className="font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow sm:text-2xl">
+              <h3 className="font-condensed text-3xl font-bold uppercase leading-tight tracking-wide text-amla-yellow sm:text-4xl">
                 {b.title}
               </h3>
               <p className="mt-3 leading-relaxed text-amla-cream/80">
