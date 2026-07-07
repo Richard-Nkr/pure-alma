@@ -9,6 +9,7 @@ type Stat = {
   prefix?: string;
   label: string;
   sub: string;
+  desc: string;
 };
 
 const kpis: Stat[] = [
@@ -17,6 +18,7 @@ const kpis: Stat[] = [
     suffix: "g",
     label: "Protéines",
     sub: "par 100g",
+    desc: "Issues des amandes torréfiées",
   },
   {
     value: 80,
@@ -24,6 +26,7 @@ const kpis: Stat[] = [
     suffix: "%",
     label: "Bons Lipides",
     sub: "Oméga 6 & 9",
+    desc: "Carburant pour l'endurance",
   },
   {
     value: 3,
@@ -31,11 +34,13 @@ const kpis: Stat[] = [
     suffix: "×",
     label: "Vitamine E",
     sub: "vs huile d'olive",
+    desc: "Bouclier antioxydant puissant",
   },
   {
     value: 0,
     label: "Sucre Raffiné",
     sub: "miel pur uniquement",
+    desc: "Zéro crash glycémique",
   },
 ];
 
@@ -92,6 +97,9 @@ export default function Kpis() {
               </span>
               <span className="mt-1 block font-condensed text-base uppercase tracking-wider text-amla-cream/50 sm:text-lg">
                 {k.sub}
+              </span>
+              <span className="mt-1 block font-sans text-sm font-medium text-amla-cream/40 sm:text-base">
+                {k.desc}
               </span>
             </div>
           ))}
