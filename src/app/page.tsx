@@ -3,7 +3,6 @@ import LaFormule from "@/components/LaFormule";
 import Kpis from "@/components/Kpis";
 import LesBienfaits from "@/components/LesBienfaits";
 import LeQuotidien from "@/components/LeQuotidien";
-import MarqueImages from "@/components/MarqueImages";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Kpis />
       <LesBienfaits />
       <LeQuotidien />
-      <MarqueImages />
     </main>
   );
 }
