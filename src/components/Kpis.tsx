@@ -1,104 +1,49 @@
-"use client";
-
-import { useEffect, useState, useRef } from "react";
-import CountUp from "react-countup";
-
-type Stat = {
-  value: number;
-  suffix?: string;
-  prefix?: string;
-  label: string;
-  sub: string;
-  desc: string;
-};
-
-const kpis: Stat[] = [
+const bienfaits = [
   {
-    value: 20,
-    suffix: "g",
-    label: "Protéines",
-    sub: "par 100g",
-    desc: "Issues des amandes torréfiées",
+    title: "Richesse Nutritionnelle",
+    desc: "Des protéines végétales, du magnésium et des acides gras essentiels dans chaque cuillère. Un concentré naturel de nutriments.",
   },
   {
-    value: 80,
-    suffix: "%",
-    label: "Lipides Insaturés",
-    sub: "Oméga 6 & 9",
-    desc: "Protection cardiovasculaire",
+    title: "Énergie Longue Durée",
+    desc: "Les bons lipides et le miel de montagne diffusent une énergie constante, sans pic ni crash glycémique.",
   },
   {
-    value: 270,
-    suffix: "mg",
-    label: "Magnésium",
-    sub: "pour 100g",
-    desc: "Récupération & anti-fatigue",
+    title: "Protection Cardiovasculaire",
+    desc: "Les oméga 6 & 9 de l'huile d'argan et des amandes contribuent à fluidifier la circulation sanguine.",
   },
   {
-    value: 0,
-    label: "Sucre Raffiné",
-    sub: "miel pur uniquement",
-    desc: "Zéro crash glycémique",
+    title: "Zéro Additif",
+    desc: "Trois ingrédients seulement. Aucun conservateur, aucun sucre raffiné, aucun artifice. Juste la pureté de la terre marocaine.",
   },
 ];
 
 export default function Kpis() {
-  const [start, setStart] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStart(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="kpis"
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
-      <div ref={ref} className="mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
+      <div className="mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <h2
           className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
           <span className="block">Quelques</span>
-          <span className="block">Chiffres clés</span>
+          <span className="block">Bienfaits</span>
         </h2>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-14">
-          {kpis.map((k) => (
-            <div key={k.label} className="text-center">
-              <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-7xl lg:text-8xl">
-                {start ? (
-                  <CountUp
-                    end={k.value}
-                    prefix={k.prefix ?? ""}
-                    suffix={k.suffix ?? ""}
-                    duration={1}
-                    useEasing
-                  />
-                ) : (
-                  <>{k.prefix ?? ""}0{k.suffix ?? ""}</>
-                )}
-              </span>
-              <span className="mt-2 block font-condensed text-xl font-bold uppercase tracking-wide text-amla-cream sm:text-2xl">
-                {k.label}
-              </span>
-              <span className="mt-1 block font-condensed text-base uppercase tracking-wider text-amla-cream/50 sm:text-lg">
-                {k.sub}
-              </span>
-              <span className="mt-1 block font-sans text-base font-medium text-amla-cream/50 sm:text-lg sm:font-semibold">
-                {k.desc}
-              </span>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-8">
+          {bienfaits.map((b) => (
+            <div
+              key={b.title}
+              className="rounded-3xl border border-amla-yellow/20 bg-amla-blue-light p-6 sm:p-8"
+            >
+              <h3 className="font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow sm:text-2xl">
+                {b.title}
+              </h3>
+              <p className="mt-3 leading-relaxed text-amla-cream/80">
+                {b.desc}
+              </p>
             </div>
           ))}
         </div>
