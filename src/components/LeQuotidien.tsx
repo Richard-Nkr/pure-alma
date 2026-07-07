@@ -27,18 +27,6 @@ export default function LeQuotidien() {
           dans vos pâtisseries maison.
         </p>
 
-        <div className="mx-auto mt-10 max-w-sm overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-          <div className="relative aspect-square">
-            <Image
-              src="/images/img13.png"
-              alt="Amlou ALMA"
-              fill
-              sizes="(max-width: 768px) 90vw, 384px"
-              className="object-cover"
-            />
-          </div>
-        </div>
-
         <a
           href="#"
           className="mt-12 inline-block rounded-xl bg-amla-yellow px-10 py-4 font-condensed text-xl font-bold uppercase tracking-wide text-amla-blue transition-transform hover:scale-105"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const bienfaits = [
   {
     title: "Boost Protéiné",
@@ -46,6 +48,18 @@ export default function Kpis() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 w-full overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+            <Image
+              src="/images/img13.png"
+              alt="Amlou ALMA"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
