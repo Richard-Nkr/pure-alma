@@ -28,12 +28,11 @@ const kpis: Stat[] = [
     desc: "Protection cardiovasculaire",
   },
   {
-    value: 3,
-    prefix: "",
-    suffix: "×",
-    label: "Vitamine E",
-    sub: "vs huile d'olive",
-    desc: "Bouclier antioxydant puissant",
+    value: 270,
+    suffix: "mg",
+    label: "Magnésium",
+    sub: "pour 100g",
+    desc: "Récupération & anti-fatigue",
   },
   {
     value: 0,
