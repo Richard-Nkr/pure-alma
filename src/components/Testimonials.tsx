@@ -35,20 +35,26 @@ export default function Testimonials() {
   return (
     <section id="avis" className="bg-amla-blue">
       <div className="mx-auto max-w-6xl px-5 py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="font-condensed text-sm font-semibold uppercase tracking-[0.2em] text-amla-yellow">
+        <div className="reveal mx-auto max-w-2xl text-center">
+          <p
+            className="font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
+            style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
+          >
             Ils en raffolent
           </p>
-          <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight text-amla-yellow md:text-5xl">
-            Noté 4,9/5 par nos gourmands.
+          <h2
+            className="mt-4 font-condensed font-bold uppercase tracking-tight text-amla-yellow"
+            style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
+          >
+            Noté 4,9/5 par nos gourmands
           </h2>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {reviews.map((r) => (
+          {reviews.map((r, idx) => (
             <figure
               key={r.name}
-              className="flex flex-col rounded-md border border-amla-yellow/15 bg-amla-blue-light p-7"
+              className={`reveal stagger-${idx + 1} flex flex-col rounded-3xl border border-amla-yellow/15 bg-amla-blue-light p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-amla-yellow/40 hover:shadow-xl hover:shadow-amla-blue-deep/40`}
             >
               <Stars />
               <blockquote className="mt-4 flex-1 leading-relaxed text-amla-cream/90">

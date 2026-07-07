@@ -42,11 +42,16 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-amla-cream/70">
-              <li>bonjour@alma.co</li>
-              <li>Taroudant · Maroc</li>
+              <li>France · Maroc</li>
               <li className="flex gap-3 pt-2">
-                <a href="#top" className="hover:text-amla-yellow">Instagram</a>
-                <a href="#top" className="hover:text-amla-yellow">Facebook</a>
+                <a
+                  href="https://www.instagram.com/pure.amla"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amla-yellow"
+                >
+                  Instagram
+                </a>
               </li>
             </ul>
           </div>
@@ -54,7 +59,6 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-amla-yellow/15 pt-6 font-condensed text-xs uppercase tracking-wide text-amla-cream/50 sm:flex-row">
           <p>© {year} ALMA. Tous droits réservés.</p>
-          <p>Fait avec passion entre l&apos;Atlas et votre table.</p>
         </div>
       </div>
     </footer>

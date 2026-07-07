@@ -76,3 +76,87 @@ html {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* ── Scroll reveal ─────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.93);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 180ms; }
+.stagger-3 { transition-delay: 280ms; }
+.stagger-4 { transition-delay: 380ms; }
+
+/* ── Hero entrance ─────────────────────────────────── */
+@keyframes hero-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-hero-nav  { animation: hero-up 0.6s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+.animate-hero-title { animation: hero-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s both; }
+.animate-hero-sub  { animation: hero-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
+.animate-hero-cta  { animation: hero-up 0.8s cubic-bezier(0.16,1,0.3,1) 0.7s both; }
+.animate-hero-arrow { animation: hero-up 0.8s cubic-bezier(0.16,1,0.3,1) 1.0s both; }
+
+/* ── Scroll arrow bounce ───────────────────────────── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.8; }
+  50%       { transform: translateY(9px); opacity: 0.4; }
+}
+.animate-scroll-bounce { animation: scroll-bounce 2s ease-in-out infinite; }
+
+/* ── Shine effect on CTA ───────────────────────────── */
+@keyframes shine {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-hero-nav, .animate-hero-title, .animate-hero-sub,
+  .animate-hero-cta, .animate-hero-arrow,
+  .animate-scroll-bounce, .animate-marquee, .animate-float, .animate-blob {
+    animation: none;
+  }
+}
+
+.btn-shine {
+  background: linear-gradient(105deg,
+    var(--color-amla-yellow) 40%,
+    #fff8 50%,
+    var(--color-amla-yellow) 60%
+  );
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
