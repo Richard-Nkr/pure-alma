@@ -7,7 +7,7 @@ const images = [
  { src: "/images/img12.png", alt: "Amlou ALMA" },
  { src: "/images/img1.png", alt: "Amlou ALMA" },
  { src: "/images/img5.png", alt: "Amlou ALMA" },
- { src: "/images/img6.png", alt: "Amlou ALMA" },
+  { src: "/images/img15.png", alt: "Amlou ALMA" },
  { src: "/images/img3.png", alt: "Amlou ALMA" },
 ];
 
