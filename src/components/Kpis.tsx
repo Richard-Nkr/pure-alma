@@ -26,13 +26,12 @@ export default function Kpis() {
       className="relative border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <Image
-        src="/images/img13.png"
+        src="/images/img14.png"
         alt="Amlou ALMA"
         fill
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-amla-blue/30" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <h2
