@@ -23,7 +23,7 @@ export default function Kpis() {
   return (
     <section
       id="kpis"
-      className="relative border-x-[16px] border-amla-blue bg-amla-yellow sm:border-x-[22px]"
+      className="relative border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <Image
         src="/images/img14.png"
@@ -35,7 +35,7 @@ export default function Kpis() {
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <h2
-          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-blue"
+          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
         >
           <span className="block">Quelques</span>
@@ -46,12 +46,12 @@ export default function Kpis() {
           {bienfaits.map((b) => (
             <div
               key={b.title}
-              className="rounded-3xl border border-amla-blue/20 bg-amla-yellow/60 p-6 backdrop-blur-sm sm:p-8"
+              className="rounded-3xl border border-amla-yellow/20 bg-amla-blue/60 p-6 backdrop-blur-sm sm:p-8"
             >
-              <h3 className="font-condensed text-3xl font-bold uppercase leading-tight tracking-wide text-amla-blue sm:text-4xl">
+              <h3 className="font-condensed text-3xl font-bold uppercase leading-tight tracking-wide text-amla-yellow sm:text-4xl">
                 {b.title}
               </h3>
-              <p className="mt-3 leading-relaxed text-amla-blue/80">
+              <p className="mt-3 leading-relaxed text-amla-cream/80">
                 {b.desc}
               </p>
             </div>
