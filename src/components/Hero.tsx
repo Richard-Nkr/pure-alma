@@ -11,9 +11,9 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="rounded-t-[28px] border-[16px] border-amla-yellow bg-amla-blue sm:rounded-t-[40px] sm:border-[22px]"
+      className="bg-amla-blue"
     >
-      <div className="relative flex h-[calc(100svh-32px)] w-full flex-col overflow-hidden rounded-t-[14px] bg-amla-blue sm:h-[calc(100svh-44px)] sm:rounded-t-[22px]">
+      <div className="relative flex h-[100svh] w-full flex-col overflow-hidden bg-amla-blue">
         {/* photo 4:3 — moitié haute de l'écran */}
         <div className="relative h-full w-full shrink-0 overflow-hidden rounded-3xl md:rounded-none">
           <Image

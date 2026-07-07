@@ -22,7 +22,7 @@ export default function LaFormule() {
   return (
     <section
       id="formule"
-      className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
+      className="rounded-t-[28px] border-x-[16px] border-amla-yellow bg-amla-blue sm:rounded-t-[40px] sm:border-x-[22px]"
     >
       <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-28">
         <p
