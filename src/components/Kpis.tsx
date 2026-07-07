@@ -98,7 +98,7 @@ export default function Kpis() {
               <span className="mt-1 block font-condensed text-base uppercase tracking-wider text-amla-cream/50 sm:text-lg">
                 {k.sub}
               </span>
-              <span className="mt-1 block font-sans text-sm font-medium text-amla-cream/40 sm:text-base">
+              <span className="mt-1 block font-sans text-base font-medium text-amla-cream/50 sm:text-lg sm:font-semibold">
                 {k.desc}
               </span>
             </div>
