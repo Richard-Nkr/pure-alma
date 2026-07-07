@@ -78,28 +78,15 @@ export default function Kpis() {
           <span className="block">Chiffres clés</span>
         </h2>
 
-        <div className="mx-auto mt-14 max-w-sm space-y-6">
-          <div className="overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-            <div className="relative aspect-[4/5]">
-              <Image
-                src="/images/img7.png"
-                alt="Amlou artisanal ALMA"
-                fill
-                sizes="(max-width: 768px) 90vw, 384px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-            <div className="relative aspect-square">
-              <Image
-                src="/images/img12.png"
-                alt="Amlou artisanal ALMA"
-                fill
-                sizes="(max-width: 768px) 90vw, 384px"
-                className="object-cover"
-              />
-            </div>
+        <div className="mx-auto mt-14 max-w-sm overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+          <div className="relative aspect-square">
+            <Image
+              src="/images/img12.png"
+              alt="Amlou artisanal ALMA"
+              fill
+              sizes="(max-width: 768px) 90vw, 384px"
+              className="object-cover"
+            />
           </div>
         </div>
 
