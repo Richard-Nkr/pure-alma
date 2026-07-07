@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 const images = [
@@ -9,7 +12,10 @@ const images = [
 ];
 
 export default function LeQuotidien() {
- return (
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
+
+  return (
   <section
    id="quotidien"
    className="bg-amla-blue"
@@ -27,12 +33,34 @@ export default function LeQuotidien() {
      dans vos pâtisseries maison.
     </p>
 
-    <a
-     href="#"
-     className="mt-12 inline-block rounded-xl bg-amla-blue px-10 py-4 font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow transition-transform hover:scale-105"
-    >
-     Je commande mon pot
-    </a>
+        {sent ? (
+          <p className="mt-12 text-center font-condensed text-lg font-bold uppercase tracking-wide text-amla-yellow">
+            Merci ! On vous tient au courant.
+          </p>
+        ) : (
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (email) setSent(true);
+            }}
+            className="mx-auto mt-12 flex max-w-md flex-col gap-3 sm:flex-row"
+          >
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="votre@email.com"
+              className="w-full rounded-xl border-0 px-5 py-4 text-amla-blue placeholder:text-amla-blue/40 focus:outline-none focus:ring-2 focus:ring-amla-yellow"
+            />
+            <button
+              type="submit"
+              className="shrink-0 rounded-xl bg-amla-blue px-8 py-4 font-condensed text-lg font-bold uppercase tracking-wide text-amla-yellow transition-transform hover:scale-105"
+            >
+              Je commande mon pot
+            </button>
+          </form>
+        )}
    </div>
 
    {/* Défilé d'images */}
