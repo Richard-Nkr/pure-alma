@@ -26,7 +26,7 @@ export default function Kpis() {
    className="relative bg-amla-blue"
   >
    <Image
-        src="/images/img14.png"
+        src="/images/img16.png"
         alt="Amlou ALMA"
         fill
         sizes="100vw"
