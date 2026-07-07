@@ -22,11 +22,10 @@ const kpis: Stat[] = [
   },
   {
     value: 80,
-    prefix: "+",
     suffix: "%",
-    label: "Bons Lipides",
+    label: "Lipides Insaturés",
     sub: "Oméga 6 & 9",
-    desc: "Carburant pour l'endurance",
+    desc: "Protection cardiovasculaire",
   },
   {
     value: 3,
