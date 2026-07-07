@@ -32,7 +32,6 @@ export default function Kpis() {
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-amla-blue/80" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <h2
