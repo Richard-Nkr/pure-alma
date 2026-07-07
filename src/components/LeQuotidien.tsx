@@ -21,13 +21,6 @@ export default function LeQuotidien() {
         >
           Le Quotidien
         </p>
-        <h2
-          className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
-          style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
-        >
-          <span className="block">Dans Votre</span>
-          <span className="block">Quotidien</span>
-        </h2>
 
         <p className="mx-auto mt-8 max-w-2xl text-center font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow sm:text-2xl">
           Avec vos yaourts & smoothies · Sur vos crêpes · Sur du pain chaud ·
