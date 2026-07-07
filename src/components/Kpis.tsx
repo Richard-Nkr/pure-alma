@@ -62,7 +62,7 @@ export default function Kpis() {
       id="kpis"
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
-      <div ref={ref} className="mx-auto max-w-5xl px-6 py-20 sm:px-10 sm:py-28">
+      <div ref={ref} className="mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <p
           className="text-center font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
           style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
@@ -77,7 +77,7 @@ export default function Kpis() {
           <span className="block">Chiffres clés</span>
         </h2>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-14">
           {kpis.map((k) => (
             <div key={k.label} className="text-center">
               <span className="block font-condensed text-5xl font-bold leading-none text-amla-yellow sm:text-7xl lg:text-8xl">
