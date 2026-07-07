@@ -5,6 +5,8 @@ const images = [
   { src: "/images/img1.png", alt: "Amlou ALMA" },
   { src: "/images/img5.png", alt: "Amlou ALMA" },
   { src: "/images/img6.png", alt: "Amlou ALMA" },
+  { src: "/images/img3.png", alt: "Amlou ALMA" },
+  { src: "/images/img4.png", alt: "Amlou ALMA" },
 ];
 
 export default function LeQuotidien() {
@@ -54,13 +56,13 @@ export default function LeQuotidien() {
             {images.map((img, i) => (
               <div
                 key={`a-${i}`}
-                className="relative aspect-[4/5] h-48 shrink-0 overflow-hidden rounded-2xl border-[4px] border-amla-yellow sm:h-64 sm:border-[6px]"
+                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-2xl border-[4px] border-amla-yellow sm:h-96 sm:border-[6px]"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="192px"
+                  sizes="288px"
                   className="object-cover"
                 />
               </div>
@@ -68,13 +70,13 @@ export default function LeQuotidien() {
             {images.map((img, i) => (
               <div
                 key={`b-${i}`}
-                className="relative aspect-[4/5] h-48 shrink-0 overflow-hidden rounded-2xl border-[4px] border-amla-yellow sm:h-64 sm:border-[6px]"
+                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-2xl border-[4px] border-amla-yellow sm:h-96 sm:border-[6px]"
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="192px"
+                  sizes="288px"
                   className="object-cover"
                 />
               </div>
