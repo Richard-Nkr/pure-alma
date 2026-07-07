@@ -63,12 +63,6 @@ export default function Kpis() {
       className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
       <div ref={ref} className="mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
-        <p
-          className="text-center font-condensed font-bold uppercase tracking-[0.3em] text-amla-yellow"
-          style={{ fontSize: "clamp(0.7rem, 1.8vw, 0.875rem)" }}
-        >
-          L&apos;ÉNERGIE EN CHIFFRES
-        </p>
         <h2
           className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
