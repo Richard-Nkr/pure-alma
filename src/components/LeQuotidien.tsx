@@ -23,8 +23,8 @@ export default function LeQuotidien() {
         </p>
 
         <p className="mx-auto mt-8 max-w-2xl text-center font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow sm:text-2xl">
-          Avec vos yaourts & smoothies · Sur vos crêpes · Sur du pain chaud ·
-          Dans vos pâtisseries maison
+          Avec vos yaourts et smoothies, sur vos crêpes, sur du pain chaud ou
+          dans vos pâtisseries maison.
         </p>
 
         <a
