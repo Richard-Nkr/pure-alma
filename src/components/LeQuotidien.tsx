@@ -42,21 +42,21 @@ export default function LeQuotidien() {
       {images.map((img, i) => (
        <div
         key={`a-${i}`}
-        className="relative aspect-[4/5] h-72 shrink-0 overflow-hiddensm:h-96"
-       >
-        <Image
-         src={img.src}
-         alt={img.alt}
-         fill
-         sizes="288px"
-         className="object-cover"
-        />
-       </div>
-      ))}
-      {images.map((img, i) => (
-       <div
-        key={`b-${i}`}
-        className="relative aspect-[4/5] h-72 shrink-0 overflow-hiddensm:h-96"
+                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-3xl sm:h-96"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="288px"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+            {images.map((img, i) => (
+              <div
+                key={`b-${i}`}
+                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-3xl sm:h-96"
        >
         <Image
          src={img.src}

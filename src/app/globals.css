@@ -9,7 +9,7 @@
 @import 'tailwindcss/utilities.css' layer(utilities);
 
 @theme {
-  --color-amla-blue: #3164c5;
+  --color-amla-blue: #23407a;
   --color-amla-blue-deep: #0e243f;
   --color-amla-blue-light: #1d4270;
   --color-amla-yellow: #f2b705;
