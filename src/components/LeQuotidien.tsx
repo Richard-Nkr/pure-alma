@@ -6,7 +6,6 @@ const images = [
   { src: "/images/img5.png", alt: "Amlou ALMA" },
   { src: "/images/img6.png", alt: "Amlou ALMA" },
   { src: "/images/img3.png", alt: "Amlou ALMA" },
-  { src: "/images/img4.png", alt: "Amlou ALMA" },
 ];
 
 export default function LeQuotidien() {
