@@ -26,7 +26,7 @@ export default function Kpis() {
    className="relative bg-amla-blue"
   >
    <Image
-    src="/images/img14.png"
+        src="/images/img6.png"
         alt="Amlou ALMA"
         fill
         sizes="100vw"
@@ -41,18 +41,6 @@ export default function Kpis() {
           <span className="block">Le superfood</span>
           <span className="block">Marocain</span>
         </h2>
-
-        <div className="mx-auto mt-10 max-w-sm overflow-hidden rounded-3xl">
-          <div className="relative aspect-square">
-            <Image
-              src="/images/img6.png"
-              alt="Amlou ALMA"
-              fill
-              sizes="(max-width: 768px) 90vw, 384px"
-              className="object-cover"
-            />
-          </div>
-        </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-8">
      {bienfaits.map((b) => (
