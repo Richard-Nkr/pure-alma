@@ -30,7 +30,7 @@ export default function Kpis() {
         alt="Amlou ALMA"
         fill
         sizes="100vw"
-        className="object-contain"
+        className="object-cover"
       />
 
    <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
