@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import CountUp from "react-countup";
 
 type Stat = {
@@ -77,18 +76,6 @@ export default function Kpis() {
           <span className="block">Quelques</span>
           <span className="block">Chiffres clés</span>
         </h2>
-
-        <div className="mt-14 w-full overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-          <div className="relative aspect-[16/9] sm:aspect-[21/9]">
-            <Image
-              src="/images/img12.png"
-              alt="Amlou artisanal ALMA"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
 
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4">
           {kpis.map((k) => (
