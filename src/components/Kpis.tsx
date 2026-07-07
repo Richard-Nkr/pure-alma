@@ -71,15 +71,6 @@ export default function Kpis() {
           <span className="block">Chiffres clés</span>
         </h2>
 
-        <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-amla-cream/80">
-          Le Amlou, connu comme le « Nutella marocain », est une pâte à tartiner
-          artisanale à base d&apos;amandes, de miel et d&apos;huile d&apos;argan.
-          C&apos;est une spécialité berbère venue tout droit d&apos;Agadir, au
-          sud du Maroc. Aussi savoureux que nutritif, il possède de nombreuses
-          vertus : source de calcium, de vitamines, d&apos;énergie, il renforce
-          le système immunitaire.
-        </p>
-
         <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4 sm:gap-x-14">
           {kpis.map((k) => (
             <div key={k.label} className="text-center">
