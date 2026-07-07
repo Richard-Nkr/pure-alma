@@ -26,11 +26,11 @@ export default function Kpis() {
    className="relative bg-amla-blue"
   >
    <Image
-        src="/images/img6.png"
+        src="/images/img14.png"
         alt="Amlou ALMA"
         fill
         sizes="100vw"
-        className="rounded-3xl object-cover"
+        className="object-contain"
       />
 
    <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
