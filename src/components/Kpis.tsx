@@ -78,8 +78,8 @@ export default function Kpis() {
           <span className="block">Chiffres clés</span>
         </h2>
 
-        <div className="mx-auto mt-14 flex max-w-3xl flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
-          <div className="w-full max-w-sm overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+        <div className="mx-auto mt-14 max-w-sm space-y-6">
+          <div className="overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
             <div className="relative aspect-[4/5]">
               <Image
                 src="/images/img7.png"
@@ -90,7 +90,7 @@ export default function Kpis() {
               />
             </div>
           </div>
-          <div className="w-full max-w-sm overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+          <div className="overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
             <div className="relative aspect-square">
               <Image
                 src="/images/img12.png"
