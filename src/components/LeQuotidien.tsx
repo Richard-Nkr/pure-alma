@@ -29,15 +29,9 @@ export default function LeQuotidien() {
           <span className="block">Quotidien</span>
         </h2>
 
-        <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-amla-cream/80">
-          L&apos;alternative saine pour vos rituels culinaires.
-        </p>
-
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-amla-cream/80">
-          Étalez-le généreusement sur du pain chaud ou des crêpes au
-          petit-déjeuner. Glissez-en une cuillère dans vos yaourts et smoothies,
-          ou utilisez-le pour sublimer vos pâtisseries maison. Une expérience
-          gustative authentique à chaque cuillère.
+        <p className="mx-auto mt-8 max-w-2xl text-center font-condensed text-xl font-bold uppercase tracking-wide text-amla-yellow sm:text-2xl">
+          Avec vos yaourts & smoothies · Sur vos crêpes · Sur du pain chaud ·
+          Dans vos pâtisseries maison
         </p>
 
         <a
