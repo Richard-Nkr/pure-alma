@@ -78,13 +78,13 @@ export default function Kpis() {
           <span className="block">Chiffres clés</span>
         </h2>
 
-        <div className="mx-auto mt-14 max-w-sm overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-          <div className="relative aspect-square">
+        <div className="mt-14 w-full overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9]">
             <Image
               src="/images/img12.png"
               alt="Amlou artisanal ALMA"
               fill
-              sizes="(max-width: 768px) 90vw, 384px"
+              sizes="100vw"
               className="object-cover"
             />
           </div>
