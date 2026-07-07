@@ -38,8 +38,8 @@ export default function Kpis() {
      className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
      style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
     >
-     <span className="block">Quelques</span>
-     <span className="block">Bienfaits</span>
+          <span className="block">Le superfood</span>
+          <span className="block">Marocain</span>
     </h2>
 
     <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-8">

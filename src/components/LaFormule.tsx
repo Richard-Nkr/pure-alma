@@ -3,19 +3,19 @@ import Image from "next/image";
 const ingredients = [
  {
   number: "01",
-  title: "Amandes",
-  desc: "La base brute. Riches en protéines végétales et en magnésium, elles offrent une texture onctueuse tout en favorisant la satiété et la récupération.",
- },
- {
-  number: "02",
-  title: "Huile d'Argan",
-  desc: "L'or du Maroc. Extraite des noix de l'arganier, elle apporte une saveur unique et protège votre système cardiovasculaire.",
- },
- {
-  number: "03",
-  title: "Miel",
-  desc: "La touche douce. Un sucre brut et naturel pour un regain d'énergie immédiat, sans crash glycémique.",
- },
+    title: "Amandes",
+    desc: "Les amandes grillées : riches en protéines, en fibres et en bons lipides.",
+  },
+  {
+    number: "02",
+    title: "Huile d'Argan",
+    desc: "L'huile d'argan culinaire : source de vitamine E et d'acides gras essentiels.",
+  },
+  {
+    number: "03",
+    title: "Miel",
+    desc: "Le miel : énergie naturelle et touche de douceur.",
+  },
 ];
 
 export default function LaFormule() {
