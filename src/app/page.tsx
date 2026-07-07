@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import LaFormule from "@/components/LaFormule";
 import Kpis from "@/components/Kpis";
-import LesBienfaits from "@/components/LesBienfaits";
 import LeQuotidien from "@/components/LeQuotidien";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Hero />
       <LaFormule />
       <Kpis />
-      <LesBienfaits />
       <LeQuotidien />
     </main>
   );
