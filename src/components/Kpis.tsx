@@ -23,9 +23,18 @@ export default function Kpis() {
   return (
     <section
       id="kpis"
-      className="border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
+      className="relative border-x-[16px] border-amla-yellow bg-amla-blue sm:border-x-[22px]"
     >
-      <div className="mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
+      <Image
+        src="/images/img13.png"
+        alt="Amlou ALMA"
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-amla-blue/80" />
+
+      <div className="relative z-10 mx-auto max-w-5xl px-6 py-10 sm:px-10 sm:py-14">
         <h2
           className="mx-auto mt-4 max-w-2xl text-center font-condensed font-bold uppercase tracking-tight text-amla-yellow"
           style={{ fontSize: "clamp(2.2rem, 6vw, 3.75rem)", lineHeight: 1.05 }}
@@ -38,7 +47,7 @@ export default function Kpis() {
           {bienfaits.map((b) => (
             <div
               key={b.title}
-              className="rounded-3xl border border-amla-yellow/20 bg-amla-blue-light p-6 sm:p-8"
+              className="rounded-3xl border border-amla-yellow/20 bg-amla-blue/60 p-6 backdrop-blur-sm sm:p-8"
             >
               <h3 className="font-condensed text-3xl font-bold uppercase leading-tight tracking-wide text-amla-yellow sm:text-4xl">
                 {b.title}
@@ -48,18 +57,6 @@ export default function Kpis() {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 w-full overflow-hidden rounded-3xl border-[6px] border-amla-yellow sm:border-[10px]">
-          <div className="relative aspect-[16/9] sm:aspect-[21/9]">
-            <Image
-              src="/images/img13.png"
-              alt="Amlou ALMA"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
         </div>
       </div>
     </section>
