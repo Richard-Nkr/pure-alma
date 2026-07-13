@@ -22,9 +22,9 @@ const shroomsGarden = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ALMA — Amlou artisanal aux amandes & huile d'argan",
+  title: "AMLA — Amlou artisanal aux amandes & huile d'argan",
   description:
-    "ALMA, l'amlou marocain artisanal : amandes torréfiées, huile d'argan pure et miel. 100% naturel, sans additifs, préparé à la main.",
+    "AMLA, l'amlou marocain artisanal : amandes torréfiées, huile d'argan pure et miel. 100% naturel, sans additifs, préparé à la main.",
   keywords: [
     "amlou",
     "huile d'argan",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "produit marocain",
   ],
   openGraph: {
-    title: "ALMA — Amlou artisanal",
+    title: "AMLA — Amlou artisanal",
     description:
       "L'amlou marocain 100% naturel : amandes, argan et miel. Préparé à la main.",
     type: "website",

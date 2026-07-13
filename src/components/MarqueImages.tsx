@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const images = [
-  { src: "/images/img12.png", alt: "Amlou ALMA" },
-  { src: "/images/img1.png", alt: "Amlou ALMA" },
-  { src: "/images/img5.png", alt: "Amlou ALMA" },
-  { src: "/images/img6.png", alt: "Amlou ALMA" },
+  { src: "/images/img12.png", alt: "Amlou AMLA" },
+  { src: "/images/img1.png", alt: "Amlou AMLA" },
+  { src: "/images/img5.png", alt: "Amlou AMLA" },
+  { src: "/images/img6.png", alt: "Amlou AMLA" },
 ];
 
 export default function MarqueImages() {

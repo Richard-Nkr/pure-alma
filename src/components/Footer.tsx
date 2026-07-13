@@ -11,7 +11,7 @@ export default function Footer() {
               <span className="block h-12 w-12 overflow-hidden rounded-full ring-1 ring-amla-yellow/30">
                 <Image
                   src="/logo.png"
-                  alt="ALMA"
+                  alt="AMLA"
                   width={48}
                   height={48}
                   className="h-12 w-12 object-cover"
@@ -30,10 +30,10 @@ export default function Footer() {
               Boutique
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-amla-cream/70">
-              <li><a href="#saveurs" className="hover:text-amla-yellow">Nos saveurs</a></li>
-              <li><a href="#commander" className="hover:text-amla-yellow">Commander</a></li>
-              <li><a href="#bienfaits" className="hover:text-amla-yellow">Bienfaits</a></li>
-              <li><a href="#degustation" className="hover:text-amla-yellow">Recettes</a></li>
+              <li><a href="#formule" className="hover:text-amla-yellow">La recette</a></li>
+              <li><a href="#kpis" className="hover:text-amla-yellow">Bienfaits</a></li>
+              <li><a href="#histoire" className="hover:text-amla-yellow">Notre histoire</a></li>
+              <li><a href="#quotidien" className="hover:text-amla-yellow">Commander</a></li>
             </ul>
           </div>
 
@@ -42,8 +42,7 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-amla-cream/70">
-              <li>France · Maroc</li>
-              <li className="flex gap-3 pt-2">
+              <li className="flex gap-3">
                 <a
                   href="https://www.instagram.com/pure.amla"
                   target="_blank"
@@ -58,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-amla-yellow/15 pt-6 font-condensed text-xs uppercase tracking-wide text-amla-cream/50 sm:flex-row">
-          <p>© {year} ALMA. Tous droits réservés.</p>
+          <p>© {year} AMLA. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

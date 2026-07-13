@@ -7,7 +7,7 @@ import CtaButton from "./CtaButton";
 const navLinks = [
   { href: "#formule", label: "La recette" },
   { href: "#kpis", label: "Bienfaits" },
-  { href: "#quotidien", label: "Commander" },
+  { href: "#histoire", label: "Notre histoire" },
 ];
 
 export default function Hero() {
@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/bg12.jpg"
-          alt="Amlou artisanal ALMA"
+          alt="Amlou artisanal AMLA"
           fill
           priority
           sizes="100vw"
@@ -43,7 +43,7 @@ export default function Hero() {
           </a>
 
           {/* Liens desktop */}
-          <div className="hidden items-center gap-6 sm:gap-8 md:flex">
+          <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((l) => (
               <a
                 key={l.label}
@@ -53,6 +53,12 @@ export default function Hero() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="#quotidien"
+              className="rounded-full bg-amla-yellow px-6 py-2.5 font-condensed text-sm font-bold uppercase tracking-wide text-amla-blue shadow-lg shadow-amla-yellow/20 transition-transform hover:scale-105"
+            >
+              Commander
+            </a>
           </div>
 
           {/* Burger mobile */}
@@ -101,6 +107,16 @@ export default function Hero() {
             {l.label}
           </a>
         ))}
+        <a
+          href="#quotidien"
+          onClick={() => setMenuOpen(false)}
+          className={`rounded-full bg-amla-yellow px-10 py-4 font-condensed text-2xl font-bold uppercase tracking-wide text-amla-blue shadow-lg shadow-amla-yellow/20 transition-all duration-300 ${
+            menuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+          style={{ transitionDelay: menuOpen ? `${100 + navLinks.length * 80}ms` : "0ms" }}
+        >
+          Commander
+        </a>
       </div>
 
       {/* Hero content */}

@@ -26,7 +26,7 @@ export default function Kpis() {
     <section id="kpis" className="relative overflow-hidden bg-amla-blue">
       <Image
         src="/images/img16.png"
-        alt="Amlou ALMA"
+        alt="Amlou AMLA"
         fill
         sizes="100vw"
         className="object-cover"
