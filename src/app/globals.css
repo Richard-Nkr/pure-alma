@@ -77,6 +77,21 @@ html {
   animation: marquee 30s linear infinite;
 }
 
+/* Sur mobile : pas de défilement auto, swipe natif au doigt */
+@media (max-width: 767px) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* ── Scroll reveal ─────────────────────────────────── */
 .reveal {
   opacity: 0;

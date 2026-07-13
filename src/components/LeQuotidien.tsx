@@ -92,14 +92,14 @@ export default function LeQuotidien() {
         )}
       </div>
 
-      {/* Défilé d'images — pause au survol */}
-      <div className="group/marquee mt-16 overflow-hidden pb-14 sm:pb-20">
+      {/* Défilé d'images — swipe au doigt sur mobile, défilement auto + pause au survol sur desktop */}
+      <div className="group/marquee no-scrollbar mt-16 snap-x snap-mandatory overflow-x-auto pb-14 sm:pb-20 md:snap-none md:overflow-hidden">
         <div className="flex">
-          <div className="animate-marquee flex shrink-0 gap-6 group-hover/marquee:[animation-play-state:paused] sm:gap-8">
+          <div className="animate-marquee flex shrink-0 gap-6 px-6 group-hover/marquee:[animation-play-state:paused] sm:gap-8 md:px-0">
             {[...images, ...images].map((img, i) => (
               <div
                 key={i}
-                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-3xl sm:h-96"
+                className="relative aspect-[4/5] h-72 shrink-0 snap-center overflow-hidden rounded-3xl sm:h-96"
               >
                 <Image
                   src={img.src}

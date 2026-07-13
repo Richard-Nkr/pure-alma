@@ -32,7 +32,6 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-amla-cream/70">
               <li><a href="#formule" className="hover:text-amla-yellow">La recette</a></li>
               <li><a href="#kpis" className="hover:text-amla-yellow">Bienfaits</a></li>
-              <li><a href="#histoire" className="hover:text-amla-yellow">Notre histoire</a></li>
               <li><a href="#quotidien" className="hover:text-amla-yellow">Commander</a></li>
             </ul>
           </div>

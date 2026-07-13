@@ -7,7 +7,6 @@ import CtaButton from "./CtaButton";
 const navLinks = [
   { href: "#formule", label: "La recette" },
   { href: "#kpis", label: "Bienfaits" },
-  { href: "#histoire", label: "Notre histoire" },
 ];
 
 export default function Hero() {
