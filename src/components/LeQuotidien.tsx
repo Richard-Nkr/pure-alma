@@ -48,6 +48,17 @@ export default function LeQuotidien() {
           body: JSON.stringify({ email }),
         });
       }
+      // Incrémente le compteur de précommandes
+      try {
+        const res = await fetch("/api/preorders", { method: "POST" });
+        const data = await res.json();
+        // Notifie le Hero pour mise à jour immédiate
+        window.dispatchEvent(
+          new CustomEvent("preorder:updated", { detail: data.count })
+        );
+      } catch {
+        // silencieux — le compteur se mettra à jour au prochain chargement
+      }
       setSent(true);
     } finally {
       setSending(false);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import CtaButton from "./CtaButton";
 
@@ -11,6 +11,26 @@ const navLinks = [
 
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [preorderCount, setPreorderCount] = useState(137);
+  const preorderMax = 500;
+
+  // Fetch du compteur au montage
+  useEffect(() => {
+    fetch("/api/preorders")
+      .then((r) => r.json())
+      .then((d) => setPreorderCount(d.count))
+      .catch(() => {});
+  }, []);
+
+  // Écoute l'événement émis par LeQuotidien après chaque inscription
+  useEffect(() => {
+    function onUpdate(e: CustomEvent<number>) {
+      setPreorderCount(e.detail);
+    }
+    window.addEventListener("preorder:updated", onUpdate as EventListener);
+    return () =>
+      window.removeEventListener("preorder:updated", onUpdate as EventListener);
+  }, []);
 
   return (
     <section id="top" className="relative flex h-[100svh] w-full flex-col overflow-hidden bg-amla-blue">
@@ -147,9 +167,9 @@ export default function Hero() {
           >
             <div className="flex items-baseline justify-between">
               <span className="font-condensed text-2xl font-bold text-amla-yellow sm:text-3xl">
-                137
+                {preorderCount}
                 <span className="text-base font-normal text-amla-cream/70 sm:text-lg">
-                  /500
+                  /{preorderMax}
                 </span>
               </span>
               <span className="font-sans text-xs font-semibold uppercase tracking-wider text-amla-cream/80">
@@ -160,11 +180,11 @@ export default function Hero() {
             <div className="mt-3 h-2.5 w-full overflow-hidden rounded-full bg-amla-blue-light/40 sm:h-3">
               <div
                 className="h-full rounded-full bg-amla-yellow shadow-[0_0_8px_rgba(242,183,5,0.35)] transition-all duration-1000"
-                style={{ width: "27.4%" }}
+                style={{ width: `${(preorderCount / preorderMax) * 100}%` }}
               />
             </div>
             <p className="mt-2 font-sans text-xs text-amla-cream/50">
-              Précommande limitée — plus que 363 pots disponibles
+              Précommande limitée — plus que {preorderMax - preorderCount} pots disponibles
             </p>
           </div>
         </div>
