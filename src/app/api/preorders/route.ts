@@ -23,9 +23,9 @@ if (typeof setInterval !== "undefined") {
   }, CLEANUP_INTERVAL);
 }
 
-function getClientIp(): string {
+async function getClientIp(): Promise<string> {
   try {
-    const h = headers();
+    const h = await headers();
     return (
       h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       h.get("x-real-ip") ||
@@ -68,7 +68,7 @@ export async function GET() {
 
 export async function POST() {
   // 🚦 Rate limit
-  const ip = getClientIp();
+  const ip = await getClientIp();
   if (isRateLimited(ip)) {
     return Response.json(
       { error: "Trop de tentatives. Réessaie dans une minute." },
