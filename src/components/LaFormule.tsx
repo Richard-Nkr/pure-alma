@@ -67,7 +67,7 @@ export default function LaFormule() {
           <div className="reveal-scale relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl order-first md:order-last">
             <Image
               src="/images/img3.png"
-              alt="Amlou artisanal AMLA — 3 ingrédients"
+              alt="Amlou artisanal AMLA. 3 ingrédients."
               fill
               sizes="(max-width: 768px) 90vw, 448px"
               className="object-cover transition-transform duration-700 hover:scale-105"

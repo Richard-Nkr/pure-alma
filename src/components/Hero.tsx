@@ -151,7 +151,7 @@ export default function Hero() {
           </h1>
           <div className="animate-hero-cta mt-10 flex flex-col items-center gap-3 md:items-start">
             <CtaButton
-              label="Commander mon pot"
+              label="Commander"
               href="#quotidien"
               size="lg"
               className="btn-shine px-10 py-5 text-lg shadow-xl shadow-amla-yellow/25"
@@ -192,7 +192,7 @@ export default function Hero() {
               {preorderCount === null ? (
                 <span className="inline-block h-3 w-56 animate-pulse rounded bg-amla-cream/15 align-middle" />
               ) : (
-                <>Précommande limitée — plus que {preorderMax - preorderCount} pots disponibles</>
+                <>Précommande limitée. Plus que {preorderMax - preorderCount} pots disponibles</>
               )}
             </p>
           </div>

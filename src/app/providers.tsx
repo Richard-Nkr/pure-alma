@@ -9,7 +9,6 @@ import { butterTheme } from "@astryxdesign/theme-butter/built";
 function ScrollReveal() {
   useEffect(() => {
     const selectors = ".reveal, .reveal-left, .reveal-right, .reveal-scale";
-    const els = document.querySelectorAll<HTMLElement>(selectors);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -21,8 +20,19 @@ function ScrollReveal() {
       },
       { threshold: 0.12 }
     );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const observeAll = () => {
+      document.querySelectorAll<HTMLElement>(selectors).forEach((el) => {
+        if (!el.classList.contains("visible")) observer.observe(el);
+      });
+    };
+    observeAll();
+    // Ré-observe les nœuds ajoutés après coup (contenu dynamique, HMR…)
+    const mutations = new MutationObserver(observeAll);
+    mutations.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      mutations.disconnect();
+      observer.disconnect();
+    };
   }, []);
   return null;
 }

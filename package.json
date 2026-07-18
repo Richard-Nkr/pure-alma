@@ -12,6 +12,7 @@
   "dependencies": {
     "@astryxdesign/core": "^0.1.2",
     "@astryxdesign/theme-butter": "^0.1.2",
+    "@vercel/analytics": "^2.0.1",
     "lucide-react": "^1.23.0",
     "next": "16.2.10",
     "react": "19.2.4",

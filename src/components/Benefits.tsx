@@ -34,7 +34,7 @@ export default function Benefits() {
             Bienfaits
           </p>
           <h2 className="mt-4 font-sans text-4xl font-bold tracking-tight text-amla-yellow md:text-5xl">
-            Gourmand. Et bon pour toi.
+            Gourmand. Et bon.
           </h2>
         </div>
 

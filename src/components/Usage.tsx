@@ -38,10 +38,10 @@ export default function Usage() {
             <p className="mt-5 text-lg leading-relaxed text-amla-cream/85">
               L&apos;amlou n&apos;est pas qu&apos;une pâte à tartiner :
               c&apos;est un allié de performance et de cuisine. Sucré ou salé, il
-              révèle des saveurs de noisette grillée dans toutes tes préparations.
+              révèle des saveurs de noisette grillée dans toutes les préparations.
             </p>
             <div className="mt-8">
-              <CtaButton label="J'essaie chez moi" href="#commander" />
+              <CtaButton label="Essayer" href="#commander" />
             </div>
           </div>
 

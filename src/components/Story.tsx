@@ -20,7 +20,7 @@ export default function Story() {
           </p>
           <p className="mt-4 leading-relaxed text-amla-cream/70">
             Chaque pot AMLA naît d&apos;un broyage lent à la meule de pierre
-            — amandes grillées, huile d&apos;argan et miel de montagne — sans
+            amandes grillées, huile d&apos;argan et miel de montagne. Sans
             aucun ajout. Une énergie brute, directement de la terre marocaine.
           </p>
 

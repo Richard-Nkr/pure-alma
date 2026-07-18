@@ -15,17 +15,17 @@ export default function Newsletter() {
           <Blob className="-right-16 -top-16 h-64 w-64 opacity-25" />
           <div className="relative mx-auto max-w-xl">
             <h2 className="font-sans text-4xl font-bold leading-tight tracking-tight text-amla-yellow md:text-5xl">
-              Reçois ton premier pot.
+              Recevoir premier pot.
             </h2>
             <p className="mt-4 text-lg text-amla-cream/85">
-              Inscris-toi et profite de <strong className="text-amla-yellow">-10%</strong>{" "}
-              sur ta première commande, plus nos recettes et routines à
+              S&apos;inscrire et profiter de <strong className="text-amla-yellow">10%</strong>{" "}
+              sur première commande, plus recettes et routines à
               l&apos;amlou.
             </p>
 
             {sent ? (
               <p className="mx-auto mt-8 max-w-sm rounded-md bg-white/10 px-6 py-4 font-condensed font-semibold uppercase tracking-wide text-amla-yellow">
-                Merci ! Vérifie ta boîte mail pour ton code de -10%.
+                Merci ! Vérifier boîte mail pour code 10%.
               </p>
             ) : (
               <form
@@ -40,10 +40,10 @@ export default function Newsletter() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="ton@email.com"
+                  placeholder="email"
                   className="w-full rounded-md border-0 px-6 py-4 text-amla-text placeholder:text-amla-text/40 focus:outline-none focus:ring-2 focus:ring-amla-yellow"
                 />
-                <CtaButton label="J'en profite" type="submit" />
+                <CtaButton label="En profiter" type="submit" />
               </form>
             )}
 
