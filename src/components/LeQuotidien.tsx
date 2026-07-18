@@ -13,11 +13,15 @@ const images = [
 
 const SHEET_WEBHOOK_URL = process.env.NEXT_PUBLIC_SHEET_WEBHOOK_URL;
 
+const MIN_FORM_TIME_MS = 2000; // anti-bot : rejette une soumission en < 2s
+
 export default function LeQuotidien() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const mountedAt = useRef(Date.now());  // time gate
+  const [honeypot, setHoneypot] = useState(""); // invisible field
 
   // Boucle infinie du swipe mobile : le contenu étant dupliqué, on
   // téléporte le scroll d'une moitié quand on atteint une extrémité.
@@ -37,6 +41,13 @@ export default function LeQuotidien() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email || sending) return;
+
+    // 🧿 Honeypot — les bots remplissent ce champ invisible
+    if (honeypot) return;
+
+    // ⏱️ Time gate — rejette les soumissions trop rapides
+    if (Date.now() - mountedAt.current < MIN_FORM_TIME_MS) return;
+
     setSending(true);
     try {
       if (SHEET_WEBHOOK_URL) {
@@ -51,11 +62,12 @@ export default function LeQuotidien() {
       // Incrémente le compteur de précommandes
       try {
         const res = await fetch("/api/preorders", { method: "POST" });
-        const data = await res.json();
-        // Notifie le Hero pour mise à jour immédiate
-        window.dispatchEvent(
-          new CustomEvent("preorder:updated", { detail: data.count })
-        );
+        if (res.ok) {
+          const data = await res.json();
+          window.dispatchEvent(
+            new CustomEvent("preorder:updated", { detail: data.count })
+          );
+        }
       } catch {
         // silencieux — le compteur se mettra à jour au prochain chargement
       }
@@ -89,6 +101,17 @@ export default function LeQuotidien() {
             onSubmit={handleSubmit}
             className="reveal stagger-2 mx-auto mt-12 flex max-w-md flex-col gap-3 sm:flex-row"
           >
+            {/* 🧿 Honeypot : invisible pour les humains, rempli par les bots */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              className="absolute -left-[9999px] opacity-0"
+              aria-hidden="true"
+            />
             <input
               type="email"
               required
