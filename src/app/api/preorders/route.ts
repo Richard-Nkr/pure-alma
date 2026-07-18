@@ -1,9 +1,10 @@
-// Stocke le compteur dans un simple fichier JSON (pas besoin de BDD)
-import { promises as fs } from "fs";
-import path from "path";
+// Compteur de précommandes — source de vérité : le Google Sheet.
+// Chaque inscription ajoute une ligne au Sheet ; le compteur = base + nb de lignes.
 import { headers } from "next/headers";
 
-const DATA_FILE = path.join(process.cwd(), "data", "preorders.json");
+const SCRIPT_URL = process.env.NEXT_PUBLIC_SHEET_WEBHOOK_URL;
+const BASE_COUNT = 137; // point de départ affiché avant les premières inscriptions
+const MAX = 500;
 
 // ── Rate limiting (in-memory, partagé entre requêtes sur la même instance) ──
 const ipHits = new Map<string, number[]>(); // IP → timestamps[]
@@ -48,22 +49,25 @@ function isRateLimited(ip: string): boolean {
 // ── Compteur ──
 
 async function readCount(): Promise<{ count: number; max: number }> {
-  try {
-    const raw = await fs.readFile(DATA_FILE, "utf-8");
-    return JSON.parse(raw);
-  } catch {
-    return { count: 137, max: 500 };
+  if (SCRIPT_URL) {
+    try {
+      const res = await fetch(`${SCRIPT_URL}?action=count`, {
+        redirect: "follow",
+        cache: "no-store",
+      });
+      const data = await res.json();
+      if (typeof data.count === "number") {
+        return { count: Math.min(BASE_COUNT + data.count, MAX), max: MAX };
+      }
+    } catch {
+      // Sheet injoignable : on retombe sur la base
+    }
   }
-}
-
-async function writeCount(data: { count: number; max: number }) {
-  await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+  return { count: BASE_COUNT, max: MAX };
 }
 
 export async function GET() {
-  const data = await readCount();
-  return Response.json(data);
+  return Response.json(await readCount());
 }
 
 export async function POST() {
@@ -76,10 +80,7 @@ export async function POST() {
     );
   }
 
-  const data = await readCount();
-  if (data.count < data.max) {
-    data.count += 1;
-    await writeCount(data);
-  }
-  return Response.json(data);
+  // Le compteur dérive uniquement des lignes du Sheet : on renvoie le total
+  // réel, sans incrément local (sinon double comptage avec la ligne ajoutée).
+  return Response.json(await readCount());
 }

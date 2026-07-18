@@ -59,18 +59,21 @@ export default function LeQuotidien() {
           body: JSON.stringify({ email }),
         });
       }
-      // Incrémente le compteur de précommandes
-      try {
-        const res = await fetch("/api/preorders", { method: "POST" });
-        if (res.ok) {
-          const data = await res.json();
-          window.dispatchEvent(
-            new CustomEvent("preorder:updated", { detail: data.count })
-          );
+      // Rafraîchit le compteur : on laisse au Sheet le temps d'enregistrer la
+      // ligne, puis on relit le total réel (pas d'incrément local → pas de double)
+      setTimeout(async () => {
+        try {
+          const res = await fetch("/api/preorders", { cache: "no-store" });
+          if (res.ok) {
+            const data = await res.json();
+            window.dispatchEvent(
+              new CustomEvent("preorder:updated", { detail: data.count })
+            );
+          }
+        } catch {
+          // silencieux — le compteur se mettra à jour au prochain chargement
         }
-      } catch {
-        // silencieux — le compteur se mettra à jour au prochain chargement
-      }
+      }, 1500);
       setSent(true);
     } finally {
       setSending(false);

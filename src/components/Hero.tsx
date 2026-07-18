@@ -11,7 +11,8 @@ const navLinks = [
 
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [preorderCount, setPreorderCount] = useState(137);
+  // null = chargement en cours : on n'affiche aucun chiffre avant la vraie valeur
+  const [preorderCount, setPreorderCount] = useState<number | null>(null);
   const preorderMax = 500;
 
   // Fetch du compteur au montage
@@ -19,7 +20,7 @@ export default function Hero() {
     fetch("/api/preorders")
       .then((r) => r.json())
       .then((d) => setPreorderCount(d.count))
-      .catch(() => {});
+      .catch(() => setPreorderCount(137));
   }, []);
 
   // Écoute l'événement émis par LeQuotidien après chaque inscription
@@ -167,7 +168,11 @@ export default function Hero() {
           >
             <div className="flex items-baseline justify-between">
               <span className="font-condensed text-2xl font-bold text-amla-yellow sm:text-3xl">
-                {preorderCount}
+                {preorderCount === null ? (
+                  <span className="inline-block h-6 w-14 animate-pulse rounded-md bg-amla-yellow/30 align-middle sm:h-7 sm:w-16" />
+                ) : (
+                  preorderCount
+                )}
                 <span className="text-base font-normal text-amla-cream/70 sm:text-lg">
                   /{preorderMax}
                 </span>
@@ -180,11 +185,15 @@ export default function Hero() {
             <div className="mt-3 h-2.5 w-full overflow-hidden rounded-full bg-amla-blue-light/40 sm:h-3">
               <div
                 className="h-full rounded-full bg-amla-yellow shadow-[0_0_8px_rgba(242,183,5,0.35)] transition-all duration-1000"
-                style={{ width: `${(preorderCount / preorderMax) * 100}%` }}
+                style={{ width: `${((preorderCount ?? 0) / preorderMax) * 100}%` }}
               />
             </div>
             <p className="mt-2 font-sans text-xs text-amla-cream/50">
-              Précommande limitée — plus que {preorderMax - preorderCount} pots disponibles
+              {preorderCount === null ? (
+                <span className="inline-block h-3 w-56 animate-pulse rounded bg-amla-cream/15 align-middle" />
+              ) : (
+                <>Précommande limitée — plus que {preorderMax - preorderCount} pots disponibles</>
+              )}
             </p>
           </div>
         </div>
