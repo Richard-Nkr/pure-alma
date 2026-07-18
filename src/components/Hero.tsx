@@ -139,6 +139,34 @@ export default function Hero() {
               Précommande
             </p>
           </div>
+
+          {/* Jauge de précommande */}
+          <div
+            className="animate-hero-cta mt-8 w-full max-w-sm rounded-2xl border border-amla-yellow/40 bg-amla-blue/70 p-4 backdrop-blur-md sm:max-w-md sm:p-5"
+            style={{ animationDelay: "0.9s" }}
+          >
+            <div className="flex items-baseline justify-between">
+              <span className="font-condensed text-2xl font-bold text-amla-yellow sm:text-3xl">
+                137
+                <span className="text-base font-normal text-amla-cream/70 sm:text-lg">
+                  /500
+                </span>
+              </span>
+              <span className="font-sans text-xs font-semibold uppercase tracking-wider text-amla-cream/80">
+                pots réservés
+              </span>
+            </div>
+            {/* Jauge */}
+            <div className="mt-3 h-2.5 w-full overflow-hidden rounded-full bg-amla-blue-light/40 sm:h-3">
+              <div
+                className="h-full rounded-full bg-amla-yellow shadow-[0_0_8px_rgba(242,183,5,0.35)] transition-all duration-1000"
+                style={{ width: "27.4%" }}
+              />
+            </div>
+            <p className="mt-2 font-sans text-xs text-amla-cream/50">
+              Précommande limitée — plus que 363 pots disponibles
+            </p>
+          </div>
         </div>
       </div>
 

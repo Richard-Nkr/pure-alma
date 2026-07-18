@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const images = [
@@ -17,6 +17,22 @@ export default function LeQuotidien() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Boucle infinie du swipe mobile : le contenu étant dupliqué, on
+  // téléporte le scroll d'une moitié quand on atteint une extrémité.
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el || !window.matchMedia("(max-width: 767px)").matches) return;
+    el.scrollLeft = 1;
+    const onScroll = () => {
+      const half = el.scrollWidth / 2;
+      if (el.scrollLeft >= half) el.scrollLeft -= half;
+      else if (el.scrollLeft < 1) el.scrollLeft += half;
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -93,13 +109,16 @@ export default function LeQuotidien() {
       </div>
 
       {/* Défilé d'images — swipe au doigt sur mobile, défilement auto + pause au survol sur desktop */}
-      <div className="group/marquee no-scrollbar mt-16 snap-x snap-mandatory overflow-x-auto pb-14 sm:pb-20 md:snap-none md:overflow-hidden">
+      <div
+        ref={carouselRef}
+        className="group/marquee no-scrollbar mt-16 overflow-x-auto pb-14 sm:pb-20 md:overflow-hidden"
+      >
         <div className="flex">
-          <div className="animate-marquee flex shrink-0 gap-6 px-6 group-hover/marquee:[animation-play-state:paused] sm:gap-8 md:px-0">
+          <div className="animate-marquee flex shrink-0 gap-6 pr-6 group-hover/marquee:[animation-play-state:paused] sm:gap-8 sm:pr-8 md:pr-0">
             {[...images, ...images].map((img, i) => (
               <div
                 key={i}
-                className="relative aspect-[4/5] h-72 shrink-0 snap-center overflow-hidden rounded-3xl sm:h-96"
+                className="relative aspect-[4/5] h-72 shrink-0 overflow-hidden rounded-3xl sm:h-96"
               >
                 <Image
                   src={img.src}
